@@ -1,5 +1,5 @@
 var express = require('express')
-	, app = express.Server(express.logger())
+	, app = express.createServer(express.logger())
 
 app.get('/', function (req, res) {
 	res.end('Hello world');
