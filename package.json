@@ -2,9 +2,9 @@
 	"name": "missive",
 	"version": "0.0.1",
 	"dependencies": {
-		"express": "latest"
-		"jade": "latest"
-		"mongodb": "latest"
-		"connect-mongodb": "latest"
+		"express": "2.5.8"
+		"jade": "0.20.1"
+		"mongodb": "0.9.8-7"
+		"connect-mongodb": "1.1.3"
 	}
 }
