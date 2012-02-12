@@ -1,0 +1,38 @@
+!!! 5
+html(lang="en")
+	head
+		title Missive
+		style
+			body {
+				padding-top: 60px;
+			}
+		include includes/head
+	body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand(href='#') Missive
+					.nav-collapse
+						ul.nav
+							li#a-
+								a(href='/') Home
+							li#a-read
+								a(href='/read') Read
+							li#a-review
+								a(href='/review') Review
+							li#a-write
+								a(href='/write') Write
+							if user
+								li#a-signout
+									a(href='/signout') Sign Out
+							else
+								li#a-signin
+									a(href='/signin') Sign In
+								li#a-signup
+									a(href='/signup') Sign Up
+		.container!= body
+		include includes/foot

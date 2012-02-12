@@ -7,18 +7,8 @@ var express = require('express')
 	, db = new Db('BoleroDB', server_config, {})
 	, mongoStore = require('connect-mongodb')
 	, sessionStore = {}
-db.open(function (err, result) {
-	if (err)
-		console.log(err);
-	else
-		db.authenticate('admin', 'Pass09Word', function (err, result) {
-			if (err)
-				console.log(err);
-			else {
-				start();
-			}
-		});
-});
+	, sign = require('./lib/sign.js')
+
 var start = function () {
 	sessionStore = new mongoStore({ db: db });
 	app.configure(function () {
@@ -31,14 +21,26 @@ var start = function () {
 		, secret: 'secret'
 		, store: sessionStore
 		}));
+		app.use(function (req, res, next) {
+			if (!res.render.overridden) {
+				var _render = res.render;
+				res.render = function (view, options) {
+					options = options || {};
+					options.user = req.session.user;
+					_render.apply(res, [view, options]);
+				};
+				res.render.overridden = true;
+			}
+			return next();
+		});
+		app.use(sign.signer(db));
 		app.use(app.router);
 		app.set('view engine', 'jade');
 		app.set('views', __dirname + '/views');
 	});
 
 	app.get('/', function (req, res) {
-		res.write(req.sessionID + '\n');
-		res.end('hello world');
+		res.render('index', { user: req.session.user });
 	});
 
 	var port = process.env.PORT || 3000;
@@ -46,3 +48,15 @@ var start = function () {
 		console.log('Listening on ' + port);
 	});
 };
+db.open(function (err, result) {
+	if (err)
+		console.log(err);
+	else
+		db.authenticate('admin', 'Pass09Word', function (err, result) {
+			if (err)
+				console.log(err);
+			else {
+				start();
+			}
+		});
+});

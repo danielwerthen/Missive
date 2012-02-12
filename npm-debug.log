@@ -1,0 +1,254 @@
+info it worked if it ends with ok
+verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+verbose cli   'install',
+verbose cli   'bcrypt' ]
+info using npm@1.1.0-beta-10
+info using node@v0.6.7
+verbose config file C:\Users\Daniel\.npmrc
+verbose config file C:\Program Files (x86)\nodejs\etc\npmrc
+verbose config file C:\Program Files (x86)\nodejs\node_modules\npm\npmrc
+verbose mkdir done: C:\Users\Daniel\AppData\Roaming\npm 755
+verbose mkdir done: D:\git\Missive 755
+verbose caching D:\git\Missive\package.json
+verbose loadDefaults missive@0.0.1
+verbose caching D:\git\Missive\node_modules\connect-mongodb\package.json
+verbose loadDefaults connect-mongodb@1.1.3
+verbose caching D:\git\Missive\node_modules\express\package.json
+verbose loadDefaults express@2.5.8
+verbose caching D:\git\Missive\node_modules\mongodb\package.json
+verbose loadDefaults mongodb@0.9.8-7
+verbose caching D:\git\Missive\node_modules\jade\package.json
+verbose loadDefaults jade@0.20.1
+verbose from cache D:\git\Missive\package.json
+verbose into D:\git\Missive [ 'bcrypt' ]
+verbose cache add bcrypt
+verbose cache add [ 'bcrypt', null ]
+silly cache add: name, spec, args [ undefined, 'bcrypt', [ 'bcrypt', null ] ]
+verbose parsed url { pathname: 'bcrypt', path: 'bcrypt', href: 'bcrypt' }
+verbose addNamed [ 'bcrypt', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'bcrypt', '', false ]
+verbose raw, before any munging bcrypt
+verbose url resolving [ 'https://registry.npmjs.org/', './bcrypt' ]
+verbose url resolved https://registry.npmjs.org/bcrypt
+http GET https://registry.npmjs.org/bcrypt
+http 200 https://registry.npmjs.org/bcrypt
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"1356O2K5AXG5KR29NH4RY2FDQ"',
+silly get cb     date: 'Sun, 12 Feb 2012 14:23:05 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '28496' } ]
+verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt'
+verbose mkdir done: C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt 755
+silly name, range, hasData 2 [ 'bcrypt', '', true ]
+silly versions [ 'bcrypt',
+silly versions   [ '0.1.2',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.1.3',
+silly versions     '0.2.2',
+silly versions     '0.2.3',
+silly versions     '0.2.4',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.3.2',
+silly versions     '0.4.0',
+silly versions     '0.4.1',
+silly versions     '0.5.0' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl0.9.8r-v83.6.6.15-win32-ia32-6.1.7601',
+verbose bin dist   { shasum: '612e01afa125c7332310f94e5186425c482b55f8',
+verbose bin dist     tarball: 'http://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz',
+verbose addRemoteTarball   '612e01afa125c7332310f94e5186425c482b55f8' ]
+verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034'
+verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069'
+verbose mkdir done: C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069 755
+verbose fetch to C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\tmp.tgz
+verbose mkdir done: C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069 755
+http GET https://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz
+http 200 https://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz
+silly updated sha bytes 24369
+info shasum 612e01afa125c7332310f94e5186425c482b55f8
+info shasum C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\tmp.tgz
+verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\___package.npm'
+verbose mkdir done: C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+verbose gunzed C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\___package.npm\package
+verbose rm'ed C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
+verbose renamed [ 'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\___package.npm\\package',
+verbose renamed   'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\package' ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: 'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\package\\package.json',
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package\package.json
+verbose loadDefaults bcrypt@0.5.0
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package\package.json
+verbose pack C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
+verbose pack C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
+silly makeList C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
+silly dir, dirLen [ 'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\package',
+silly dir, dirLen   94 ]
+verbose tarball C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
+verbose parent C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
+verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\___package.npm'
+verbose mkdir done: C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+verbose gunzed C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\___package.npm\package
+verbose rm'ed C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package
+verbose renamed [ 'C:\\Users\\Daniel\\AppData\\Roaming\\npm-cache\\bcrypt\\0.5.0\\___package.npm\\package',
+verbose renamed   'C:\\Users\\Daniel\\AppData\\Roaming\\npm-cache\\bcrypt\\0.5.0\\package' ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: 'C:\\Users\\Daniel\\AppData\\Roaming\\npm-cache\\bcrypt\\0.5.0\\package\\package.json',
+verbose has wscript     serverjs: false,
+verbose has wscript     contributors: false,
+verbose has wscript     wscript: true } ]
+verbose caching C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package\package.json
+verbose loadDefaults bcrypt@0.5.0
+silly updated sha bytes 24159
+info shasum 758d09ba6580678e9021b030820957a21d922cab
+info shasum C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
+verbose from cache C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package\package.json
+verbose chmod C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz 644
+silly skipping chown for windows C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
+silly resolved [ { name: 'bcrypt',
+silly resolved     description: 'A bcrypt library for NodeJS.',
+silly resolved     keywords: 
+silly resolved      [ 'bcrypt',
+silly resolved        'password',
+silly resolved        'auth',
+silly resolved        'authentication',
+silly resolved        'encryption',
+silly resolved        'crypt',
+silly resolved        'crypto' ],
+silly resolved     main: './bcrypt',
+silly resolved     version: '0.5.0',
+silly resolved     author: { name: 'Nick Campbell', url: 'http://github.com/ncb000gt' },
+silly resolved     engines: { node: '>= 0.6.0' },
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/ncb000gt/node.bcrypt.js.git' },
+silly resolved     licenses: [ { type: 'MIT' } ],
+silly resolved     bugs: { url: 'http://github.com/ncb000gt/node.bcrypt.js/issues' },
+silly resolved     scripts: { install: 'make build', test: 'make test' },
+silly resolved     devDependencies: { nodeunit: '>=0.6.4' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Antonio Salazar Cardozo',
+silly resolved          email: 'savedfastcool@gmail.com',
+silly resolved          url: 'https://github.com/Shadowfiend' },
+silly resolved        { name: 'Van Nguyen',
+silly resolved          email: 'the.gol.effect@gmail.com',
+silly resolved          url: 'https://github.com/thegoleffect' },
+silly resolved        { name: 'David Trejo',
+silly resolved          email: 'david@dtrejo.com',
+silly resolved          url: 'https://github.com/dtrejo' },
+silly resolved        { name: 'Ben Glow',
+silly resolved          email: 'glen.low@pixelglow.com',
+silly resolved          url: 'https://github.com/pixelglow' },
+silly resolved        { name: 'NewITFarmer.com',
+silly resolved          url: 'https://github.com/newitfarmer' },
+silly resolved        { name: 'Alfred Westerveld',
+silly resolved          email: 'alfredwesterveld@gmail.com',
+silly resolved          url: 'https://github.com/alfredwesterveld' },
+silly resolved        { name: 'Vincent Côté-Roy',
+silly resolved          email: 'vincentcr@gmail.com',
+silly resolved          url: 'https://github.com/vincentcr' },
+silly resolved        { name: 'Lloyd Hilaiel',
+silly resolved          email: 'lloyd@hilaiel.com',
+silly resolved          url: 'https://github.com/lloyd' },
+silly resolved        { name: 'Roman Shtylman',
+silly resolved          email: 'shtylman@gmail.com',
+silly resolved          url: 'https://github.com/shtylman' },
+silly resolved        { name: 'Vadim Graboys',
+silly resolved          email: 'dimva13@gmail.com',
+silly resolved          url: 'https://github.com/vadimg' },
+silly resolved        { name: 'Ben Noorduis', url: 'https://github.com/bnoordhuis' } ],
+silly resolved     _id: 'bcrypt@0.5.0',
+silly resolved     dependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.0-beta-10',
+silly resolved     _nodeVersion: 'v0.6.7',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '758d09ba6580678e9021b030820957a21d922cab' } } ]
+info into D:\git\Missive bcrypt@0.5.0
+info installOne bcrypt@0.5.0
+info unbuild D:\git\Missive\node_modules\bcrypt
+verbose from cache C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package\package.json
+verbose mkdir (expected) error ENOENT, no such file or directory 'D:\git\Missive\node_modules\___bcrypt.npm'
+verbose mkdir done: D:\git\Missive\node_modules\___bcrypt.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget D:\git\Missive\node_modules\bcrypt
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+verbose gunzed D:\git\Missive\node_modules\___bcrypt.npm\package
+verbose rm'ed D:\git\Missive\node_modules\bcrypt
+verbose renamed [ 'D:\\git\\Missive\\node_modules\\___bcrypt.npm\\package',
+verbose renamed   'D:\\git\\Missive\\node_modules\\bcrypt' ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: 'D:\\git\\Missive\\node_modules\\bcrypt\\package.json',
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching D:\git\Missive\node_modules\bcrypt\package.json
+verbose loadDefaults bcrypt@0.5.0
+info preinstall bcrypt@0.5.0
+verbose from cache D:\git\Missive\node_modules\bcrypt\package.json
+verbose into D:\git\Missive\node_modules\bcrypt []
+silly resolved []
+verbose about to build D:\git\Missive\node_modules\bcrypt
+info build D:\git\Missive\node_modules\bcrypt
+verbose from cache D:\git\Missive\node_modules\bcrypt\package.json
+verbose linkStuff [ false, false, false, 'D:\\git\\Missive\\node_modules' ]
+info linkStuff bcrypt@0.5.0
+verbose linkBins bcrypt@0.5.0
+verbose linkMans bcrypt@0.5.0
+verbose rebuildBundles bcrypt@0.5.0
+info install bcrypt@0.5.0
+verbose unsafe-perm in lifecycle true
+silly exec cmd "/c" "make build"
+silly spawning [ 'cmd',
+silly spawning   [ '/c', 'make build' ],
+silly spawning   'D:\\git\\Missive\\node_modules\\bcrypt' ]
+info bcrypt@0.5.0 Failed to exec install script
+ERR! error installing bcrypt@0.5.0
+info unbuild D:\git\Missive\node_modules\bcrypt
+verbose from cache D:\git\Missive\node_modules\bcrypt\package.json
+info preuninstall bcrypt@0.5.0
+info uninstall bcrypt@0.5.0
+verbose unbuild bcrypt@0.5.0 [ true,
+verbose unbuild bcrypt@0.5.0   'D:\\git\\Missive\\node_modules',
+verbose unbuild bcrypt@0.5.0   'D:\\git\\Missive\\node_modules' ]
+info postuninstall bcrypt@0.5.0
+verbose installOne cb bcrypt@0.5.0
+ERR! bcrypt@0.5.0 install: `make build`
+ERR! `cmd "/c" "make build"` failed with 1
+ERR! 
+ERR! Failed at the bcrypt@0.5.0 install script.
+ERR! This is most likely a problem with the bcrypt package,
+ERR! not with npm itself.
+ERR! Tell the author that this fails on your system:
+ERR!     make build
+ERR! You can get their info via:
+ERR!     npm owner ls bcrypt
+ERR! There is likely additional logging output above.
+ERR! 
+ERR! System Windows_NT 6.1.7601
+ERR! command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "bcrypt"
+ERR! cwd D:\git\Missive
+ERR! node -v v0.6.7
+ERR! npm -v 1.1.0-beta-10
+ERR! code ELIFECYCLE
+ERR! message bcrypt@0.5.0 install: `make build`
+ERR! message `cmd "/c" "make build"` failed with 1
+verbose exit [ 1, true ]
