@@ -1,5 +1,5 @@
 var express = require('express')
-	, app = express.createServer(express.logger())
+	, app = express.createServer()
 	, mongo = require('mongodb')
 	, Db = mongo.Db 
 	, Server = mongo.Server
@@ -7,14 +7,16 @@ var express = require('express')
 	, db = new Db('BoleroDB', server_config, {})
 	, mongoStore = require('./connect-mongodb')
 	, sessionStore = {}
+	, helpers = require('./helpers')
 	, sign = require('./lib/sign.js')
 	, networks = require('./networks/routes')
 
 var start = function () {
 	sessionStore = new mongoStore({ db: db });
 	app.configure(function () {
+		app.settings.env = 'production';
 		app.use(express.static(__dirname + '/public'));
-		app.use(express.logger());
+		app.use(express.logger({ format: ':method :url' }));
 		app.use(express.bodyParser());
 		app.use(express.cookieParser());
 		app.use(express.session({
@@ -22,18 +24,7 @@ var start = function () {
 		, secret: 'secret'
 		, store: sessionStore
 		}));
-		app.use(function (req, res, next) {
-			if (!res.render.overridden) {
-				var _render = res.render;
-				res.render = function (view, options) {
-					options = options || {};
-					options.user = req.session.user;
-					_render.apply(res, [view, options]);
-				};
-				res.render.overridden = true;
-			}
-			return next();
-		});
+		helpers.register(app, db);
 		app.use(sign.signer(db));
 		app.use(app.router);
 		app.set('view engine', 'jade');

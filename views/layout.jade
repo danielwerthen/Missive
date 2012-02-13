@@ -26,29 +26,30 @@ html(lang="en")
 								a(href='/review') Review
 							li#a-write
 								a(href='/write') Write
-						ul.nav.nav-sidebar
-							li
-								.btn-group
-									a.btn.btn-primary(href= '#') The New Yorker
-									a.btn.btn-primary.dropdown-toggle(data-toggle='dropdown', href='#')
-										span.caret
-									ul.dropdown-menu
-										li
-											a(href= '#') The New Yorker
-										li
-											a(href= '#') The Economist
-										li
-											a(href= '#') The Atlantic
-										li.divider
-										li
-											a(href= '/networks/new') Start a new network
+						ul.nav.pull-right
 							if user
 								li#a-signout
 									a(href='/signout') Sign Out
+								li.divider-vertical
+								if networks.length > 0
+									li.dropdown
+										a.dropdown-toggle(data-toggle='dropdown', href='#')= currentNetwork.name
+											b.caret
+										ul.dropdown-menu
+											each network in networks
+												li
+													a(href= '/networks/byId/' + network._id)= network.name
+											li.divider
+											li
+												a(href= '/networks/new') Start a new network
+								else
+									li
+										a(href= '/networks/new') Start a new network
 							else
 								li#a-signin
 									a(href='/signin') Sign In
 								li#a-signup
 									a(href='/signup') Sign Up
+
 		.container!= body
 		include includes/foot
