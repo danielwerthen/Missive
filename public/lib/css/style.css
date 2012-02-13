@@ -1,0 +1,7 @@
+.nav.nav-sidebar {
+	float: right;
+}
+
+.in.collapse .nav.nav-sidebar {
+	float: left !important;
+}

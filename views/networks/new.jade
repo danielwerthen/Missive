@@ -1,0 +1,17 @@
+- var validation = validation || {};
+- var nw = nw || {};
+.row
+	.span8
+		form.form-horizontal(action= '/networks/new', method= 'post')
+			fieldset
+				legend Network
+				.control-group( class= validation.name )
+					label.control-label( for= 'name' ) Name
+					.controls
+						input.input-xlarge#name(type= 'test', name='name', value=nw.name, tabindex=1)
+						p.help-block=validation.nameMessage
+				.form-actions
+					button.btn.btn-primary(type= 'submit', tabindex=2) Start it already!
+	.span4
+		h3 Starting a new network
+		p Enter some vital data, and we'll be good to go!

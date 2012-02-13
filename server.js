@@ -5,9 +5,10 @@ var express = require('express')
 	, Server = mongo.Server
 	, server_config = new Server('staff.mongohq.com', 10048, { auto_reconnect: true, native_parser: true})
 	, db = new Db('BoleroDB', server_config, {})
-	, mongoStore = require('connect-mongodb')
+	, mongoStore = require('./connect-mongodb')
 	, sessionStore = {}
 	, sign = require('./lib/sign.js')
+	, networks = require('./networks/routes')
 
 var start = function () {
 	sessionStore = new mongoStore({ db: db });
@@ -42,6 +43,8 @@ var start = function () {
 	app.get('/', function (req, res) {
 		res.render('index', { user: req.session.user });
 	});
+
+	networks.register(app, db);
 
 	var port = process.env.PORT || 3000;
 	app.listen(port, function () {

@@ -1,254 +1,1526 @@
 info it worked if it ends with ok
 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-verbose cli   'install',
-verbose cli   'bcrypt' ]
-info using npm@1.1.0-beta-10
-info using node@v0.6.7
-verbose config file C:\Users\Daniel\.npmrc
-verbose config file C:\Program Files (x86)\nodejs\etc\npmrc
+verbose cli   'install' ]
+info using npm@1.0.103
+info using node@v0.5.10
+verbose config file C:\Users\dwn.GAIA2000\.npmrc
+verbose config file C:\Program Files (x86)\etc\npmrc
 verbose config file C:\Program Files (x86)\nodejs\node_modules\npm\npmrc
-verbose mkdir done: C:\Users\Daniel\AppData\Roaming\npm 755
-verbose mkdir done: D:\git\Missive 755
-verbose caching D:\git\Missive\package.json
+silly testEngine { name: 'missive',
+silly testEngine   version: '0.0.1',
+silly testEngine   dependencies: 
+silly testEngine    { express: '2.5.8',
+silly testEngine      jade: '0.20.1',
+silly testEngine      mongodb: '0.9.8-7',
+silly testEngine      'connect-mongodb': '1.1.3' },
+silly testEngine   _id: 'missive@0.0.1',
+silly testEngine   scripts: { start: 'node server.js' },
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\git\Missive\package.json
 verbose loadDefaults missive@0.0.1
-verbose caching D:\git\Missive\node_modules\connect-mongodb\package.json
-verbose loadDefaults connect-mongodb@1.1.3
-verbose caching D:\git\Missive\node_modules\express\package.json
+verbose where, deps [ 'C:\\git\\Missive',
+verbose where, deps   [ 'express', 'jade', 'mongodb', 'connect-mongodb' ] ]
+verbose from cache C:\git\Missive\package.json
+info preinstall missive@0.0.1
+silly testEngine { name: 'express',
+silly testEngine   description: 'Sinatra inspired web development framework',
+silly testEngine   version: '2.5.8',
+silly testEngine   author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly testEngine      { name: 'Aaron Heckmann',
+silly testEngine        email: 'aaron.heckmann+github@gmail.com' },
+silly testEngine      { name: 'Ciaran Jessup', email: 'ciaranj@gmail.com' },
+silly testEngine      { name: 'Guillermo Rauch', email: 'rauchg@gmail.com' } ],
+silly testEngine   dependencies: { connect: '1.x', mime: '1.2.4', qs: '0.4.x', mkdirp: '0.3.0' },
+silly testEngine   devDependencies: 
+silly testEngine    { 'connect-form': '0.2.1',
+silly testEngine      ejs: '0.4.2',
+silly testEngine      expresso: '0.9.2',
+silly testEngine      hamljs: '0.6.x',
+silly testEngine      jade: '0.16.2',
+silly testEngine      stylus: '0.13.0',
+silly testEngine      should: '0.3.2',
+silly testEngine      'express-messages': '0.0.2',
+silly testEngine      'node-markdown': '>= 0.0.1',
+silly testEngine      'connect-redis': '>= 0.0.1' },
+silly testEngine   keywords: [ 'framework', 'sinatra', 'web', 'rest', 'restful' ],
+silly testEngine   repository: { type: 'git', url: 'git://github.com/visionmedia/express.git' },
+silly testEngine   main: 'index',
+silly testEngine   bin: { express: './bin/express' },
+silly testEngine   scripts: { test: 'make test', prepublish: 'npm prune' },
+silly testEngine   engines: { node: '>= 0.4.1 < 0.7.0' },
+silly testEngine   _id: 'express@2.5.8',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\git\Missive\node_modules\express\package.json
 verbose loadDefaults express@2.5.8
-verbose caching D:\git\Missive\node_modules\mongodb\package.json
-verbose loadDefaults mongodb@0.9.8-7
-verbose caching D:\git\Missive\node_modules\jade\package.json
+silly testEngine { name: 'jade',
+silly testEngine   description: 'Jade template engine',
+silly testEngine   version: '0.20.1',
+silly testEngine   author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly testEngine   repository: { type: 'git', url: 'git://github.com/visionmedia/jade.git' },
+silly testEngine   main: './index.js',
+silly testEngine   bin: { jade: './bin/jade' },
+silly testEngine   dependencies: { commander: '0.5.x', mkdirp: '>= 0.0.7' },
+silly testEngine   devDependencies: 
+silly testEngine    { mocha: '*',
+silly testEngine      'coffee-script': '>= 0.0.1',
+silly testEngine      markdown: '>= 0.0.1',
+silly testEngine      stylus: '>= 0.0.1',
+silly testEngine      uubench: '0.0.1',
+silly testEngine      'uglify-js': '>= 1.0.7' },
+silly testEngine   scripts: { prepublish: 'npm prune' },
+silly testEngine   engines: { node: '>= 0.1.98' },
+silly testEngine   _id: 'jade@0.20.1',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\git\Missive\node_modules\jade\package.json
 verbose loadDefaults jade@0.20.1
-verbose from cache D:\git\Missive\package.json
-verbose into D:\git\Missive [ 'bcrypt' ]
-verbose cache add bcrypt
-verbose cache add [ 'bcrypt', null ]
-silly cache add: name, spec, args [ undefined, 'bcrypt', [ 'bcrypt', null ] ]
-verbose parsed url { pathname: 'bcrypt', path: 'bcrypt', href: 'bcrypt' }
-verbose addNamed [ 'bcrypt', '' ]
-verbose addNamed [ null, '' ]
-silly name, range, hasData [ 'bcrypt', '', false ]
-verbose raw, before any munging bcrypt
-verbose url resolving [ 'https://registry.npmjs.org/', './bcrypt' ]
-verbose url resolved https://registry.npmjs.org/bcrypt
-http GET https://registry.npmjs.org/bcrypt
-http 200 https://registry.npmjs.org/bcrypt
-silly get cb [ 200,
-silly get cb   { vary: 'Accept',
-silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
-silly get cb     etag: '"1356O2K5AXG5KR29NH4RY2FDQ"',
-silly get cb     date: 'Sun, 12 Feb 2012 14:23:05 GMT',
-silly get cb     'content-type': 'application/json',
-silly get cb     'content-length': '28496' } ]
-verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt'
-verbose mkdir done: C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt 755
-silly name, range, hasData 2 [ 'bcrypt', '', true ]
-silly versions [ 'bcrypt',
-silly versions   [ '0.1.2',
-silly versions     '0.2.0',
-silly versions     '0.2.1',
-silly versions     '0.1.3',
-silly versions     '0.2.2',
-silly versions     '0.2.3',
-silly versions     '0.2.4',
-silly versions     '0.3.0',
-silly versions     '0.3.1',
-silly versions     '0.3.2',
-silly versions     '0.4.0',
-silly versions     '0.4.1',
-silly versions     '0.5.0' ] ]
-verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl0.9.8r-v83.6.6.15-win32-ia32-6.1.7601',
-verbose bin dist   { shasum: '612e01afa125c7332310f94e5186425c482b55f8',
-verbose bin dist     tarball: 'http://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz' } ]
-verbose addRemoteTarball [ 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz',
-verbose addRemoteTarball   '612e01afa125c7332310f94e5186425c482b55f8' ]
-verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034'
-verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069'
-verbose mkdir done: C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069 755
-verbose fetch to C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\tmp.tgz
-verbose mkdir done: C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069 755
-http GET https://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz
-http 200 https://registry.npmjs.org/bcrypt/-/bcrypt-0.5.0.tgz
-silly updated sha bytes 24369
-info shasum 612e01afa125c7332310f94e5186425c482b55f8
-info shasum C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\tmp.tgz
-verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\___package.npm'
-verbose mkdir done: C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\___package.npm 755
-verbose unpack_ uid, gid [ undefined, undefined ]
-verbose unpackTarget C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
-silly gunzTarPerm modes [ '755', '644' ]
-silly afterUntar undefined
-verbose gunzed C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\___package.npm\package
-verbose rm'ed C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
-verbose renamed [ 'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\___package.npm\\package',
-verbose renamed   'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\package' ]
-verbose has wscript [ undefined,
-verbose has wscript   { file: 'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\package\\package.json',
-verbose has wscript     contributors: false,
-verbose has wscript     serverjs: false,
-verbose has wscript     wscript: true } ]
-verbose caching C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package\package.json
-verbose loadDefaults bcrypt@0.5.0
-verbose tarball contents [ 'package', 'tmp.tgz' ]
-verbose from cache C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package\package.json
-verbose pack C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
-verbose pack C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
-silly makeList C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
-silly dir, dirLen [ 'C:\\Users\\Daniel\\AppData\\Local\\Temp\\npm-1329056585034\\1329056585034-0.6040427009575069\\package',
-silly dir, dirLen   94 ]
-verbose tarball C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
-verbose parent C:\Users\Daniel\AppData\Local\Temp\npm-1329056585034\1329056585034-0.6040427009575069\package
-verbose mkdir (expected) error ENOENT, no such file or directory 'C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\___package.npm'
-verbose mkdir done: C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\___package.npm 755
-verbose unpack_ uid, gid [ undefined, undefined ]
-verbose unpackTarget C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package
-silly gunzTarPerm modes [ '755', '644' ]
-silly afterUntar undefined
-verbose gunzed C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\___package.npm\package
-verbose rm'ed C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package
-verbose renamed [ 'C:\\Users\\Daniel\\AppData\\Roaming\\npm-cache\\bcrypt\\0.5.0\\___package.npm\\package',
-verbose renamed   'C:\\Users\\Daniel\\AppData\\Roaming\\npm-cache\\bcrypt\\0.5.0\\package' ]
-verbose has wscript [ undefined,
-verbose has wscript   { file: 'C:\\Users\\Daniel\\AppData\\Roaming\\npm-cache\\bcrypt\\0.5.0\\package\\package.json',
-verbose has wscript     serverjs: false,
-verbose has wscript     contributors: false,
-verbose has wscript     wscript: true } ]
-verbose caching C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package\package.json
-verbose loadDefaults bcrypt@0.5.0
-silly updated sha bytes 24159
-info shasum 758d09ba6580678e9021b030820957a21d922cab
-info shasum C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
-verbose from cache C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package\package.json
-verbose chmod C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz 644
-silly skipping chown for windows C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package.tgz
-silly resolved [ { name: 'bcrypt',
-silly resolved     description: 'A bcrypt library for NodeJS.',
-silly resolved     keywords: 
-silly resolved      [ 'bcrypt',
-silly resolved        'password',
-silly resolved        'auth',
-silly resolved        'authentication',
-silly resolved        'encryption',
-silly resolved        'crypt',
-silly resolved        'crypto' ],
-silly resolved     main: './bcrypt',
-silly resolved     version: '0.5.0',
-silly resolved     author: { name: 'Nick Campbell', url: 'http://github.com/ncb000gt' },
-silly resolved     engines: { node: '>= 0.6.0' },
+silly testEngine { name: 'mongodb',
+silly testEngine   description: 'A node.js driver for MongoDB',
+silly testEngine   keywords: [ 'mongodb', 'mongo', 'driver', 'db' ],
+silly testEngine   version: '0.9.8-7',
+silly testEngine   author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Aaron Heckmann' },
+silly testEngine      { name: 'Christoph Pojer' },
+silly testEngine      { name: 'Pau Ramon Revilla' },
+silly testEngine      { name: 'Nathan White' },
+silly testEngine      { name: 'Emmerman' },
+silly testEngine      { name: 'Seth LaForge' },
+silly testEngine      { name: 'Boris Filipov' },
+silly testEngine      { name: 'Stefan Schärmeli' },
+silly testEngine      { name: 'Tedde Lundgren' },
+silly testEngine      { name: 'renctan' },
+silly testEngine      { name: 'Sergey Ukustov' },
+silly testEngine      { name: 'Ciaran Jessup' },
+silly testEngine      { name: 'kuno' },
+silly testEngine      { name: 'srimonti' },
+silly testEngine      { name: 'Erik Abele' },
+silly testEngine      { name: 'Pratik Daga' },
+silly testEngine      { name: 'Slobodan Utvic' },
+silly testEngine      { name: 'Kristina Chodorow' },
+silly testEngine      { name: 'Yonathan Randolph' },
+silly testEngine      { name: 'Brian Noguchi' },
+silly testEngine      { name: 'Sam Epstein' },
+silly testEngine      { name: 'James Harrison Fisher' },
+silly testEngine      { name: 'Vladimir Dronnikov' },
+silly testEngine      { name: 'Ben Hockey' },
+silly testEngine      { name: 'Henrik Johansson' },
+silly testEngine      { name: 'Simon Weare' },
+silly testEngine      { name: 'Alex Gorbatchev' },
+silly testEngine      { name: 'Shimon Doodkin' },
+silly testEngine      { name: 'Kyle Mueller' },
+silly testEngine      { name: 'Eran Hammer-Lahav' },
+silly testEngine      { name: 'Marcin Ciszak' },
+silly testEngine      { name: 'François de Metz' },
+silly testEngine      { name: 'Vinay Pulim' },
+silly testEngine      { name: 'nstielau' },
+silly testEngine      { name: 'Adam Wiggins' },
+silly testEngine      { name: 'entrinzikyl' },
+silly testEngine      { name: 'Jeremy Selier' },
+silly testEngine      { name: 'Ian Millington' },
+silly testEngine      { name: 'Public Keating' },
+silly testEngine      { name: 'andrewjstone' },
+silly testEngine      { name: 'Christopher Stott' },
+silly testEngine      { name: 'Corey Jewett' },
+silly testEngine      { name: 'brettkiefer' },
+silly testEngine      { name: 'Rob Holland' },
+silly testEngine      { name: 'Senmiao Liu' },
+silly testEngine      { name: 'heroic' },
+silly testEngine      { name: 'gitfy' },
+silly testEngine      { name: 'Andrew Stone' },
+silly testEngine      { name: 'John Le Drew' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/christkv/node-mongodb-native.git' },
+silly testEngine   bugs: 
+silly testEngine    { email: 'node-mongodb-native@googlegroups.com',
+silly testEngine      url: 'http://github.com/christkv/node-mongodb-native/issues' },
+silly testEngine   os: [ 'linux', 'darwin', 'freebsd' ],
+silly testEngine   devDependencies: 
+silly testEngine    { dox: '0.1.3',
+silly testEngine      'uglify-js': '1.2.5',
+silly testEngine      ejs: '0.6.1',
+silly testEngine      nodeunit: '0.6.4' },
+silly testEngine   config: { native: false },
+silly testEngine   main: './lib/mongodb/index',
+silly testEngine   directories: { lib: './lib/mongodb' },
+silly testEngine   engines: { node: '>=0.4.0' },
+silly testEngine   scripts: { install: 'node install.js' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'Apache License, Version 2.0',
+silly testEngine        url: 'http://www.apache.org/licenses/LICENSE-2.0' } ],
+silly testEngine   _id: 'mongodb@0.9.8-7',
+silly testEngine   dependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\git\Missive\node_modules\mongodb\package.json
+verbose loadDefaults mongodb@0.9.8-7
+verbose from cache C:\git\Missive\package.json
+verbose into C:\git\Missive [ 'express@2.5.8',
+verbose into C:\git\Missive   'jade@0.20.1',
+verbose into C:\git\Missive   'mongodb@0.9.8-7',
+verbose into C:\git\Missive   'connect-mongodb@1.1.3' ]
+verbose from cache C:\git\Missive\node_modules\express\package.json
+verbose from cache C:\git\Missive\node_modules\jade\package.json
+verbose from cache C:\git\Missive\node_modules\mongodb\package.json
+verbose cache add connect-mongodb@1.1.3
+verbose cache add [ 'connect-mongodb@1.1.3', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'connect-mongodb@1.1.3',
+silly cache add: name, spec, args   [ 'connect-mongodb@1.1.3', null ] ]
+verbose parsed url { pathname: 'connect-mongodb@1.1.3',
+verbose parsed url   href: 'connect-mongodb@1.1.3' }
+silly cache add: name, spec, args [ 'connect-mongodb', '1.1.3', [ 'connect-mongodb', '1.1.3' ] ]
+verbose parsed url { pathname: '1.1.3', href: '1.1.3' }
+info addNamed [ 'connect-mongodb', '1.1.3' ]
+verbose addNamed [ '1.1.3', '1.1.3' ]
+verbose already installed in C:\git\Missive skipping express@2.5.8
+verbose already installed in C:\git\Missive skipping jade@0.20.1
+verbose already installed in C:\git\Missive skipping mongodb@0.9.8-7
+verbose GET connect-mongodb/1.1.3
+verbose raw, before any munging connect-mongodb/1.1.3
+verbose url resolving [ 'https://registry.npmjs.org/', './connect-mongodb/1.1.3' ]
+verbose url resolved https://registry.npmjs.org/connect-mongodb/1.1.3
+verbose etag "E8WY8ELYB7BGMVR502VN0KGI7"
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"E8WY8ELYB7BGMVR502VN0KGI7"',
+silly get cb     date: 'Mon, 13 Feb 2012 07:59:38 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag connect-mongodb/1.1.3 from cache
+verbose bin dist [ null,
+verbose bin dist   { shasum: '0f6f88604e7fb8ae3bcb71aaab188e08b03d6f44',
+verbose bin dist     tarball: 'http://registry.npmjs.org/connect-mongodb/-/connect-mongodb-1.1.3.tgz' } ]
+silly testEngine { name: 'connect-mongodb',
+silly testEngine   description: 'mongodb session store for connect',
+silly testEngine   version: '1.1.3',
+silly testEngine   author: { name: 'Vladimir Dronnikov', email: 'dronnikov@gmail.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Pau Ramon', email: 'masylum@gmail.com' },
+silly testEngine      { name: 'ramv' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/masylum/connect-mongodb.git' },
+silly testEngine   dependencies: { mongodb: '0.9.7', connect: '1.8.5' },
+silly testEngine   devDependencies: { testosterone: '1.2.0', gently: '0.9.1', funk: '1.5.0' },
+silly testEngine   main: './lib/connect-mongodb',
+silly testEngine   _id: 'connect-mongodb@1.1.3',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   scripts: {} }
+verbose caching C:\Users\dwn.GAIA2000\npm-cache\connect-mongodb\1.1.3\package\package.json
+verbose loadDefaults connect-mongodb@1.1.3
+silly resolved [ { name: 'connect-mongodb',
+silly resolved     description: 'mongodb session store for connect',
+silly resolved     version: '1.1.3',
+silly resolved     author: { name: 'Vladimir Dronnikov', email: 'dronnikov@gmail.com' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Pau Ramon', email: 'masylum@gmail.com' },
+silly resolved        { name: 'ramv' } ],
 silly resolved     repository: 
 silly resolved      { type: 'git',
-silly resolved        url: 'git://github.com/ncb000gt/node.bcrypt.js.git' },
-silly resolved     licenses: [ { type: 'MIT' } ],
-silly resolved     bugs: { url: 'http://github.com/ncb000gt/node.bcrypt.js/issues' },
-silly resolved     scripts: { install: 'make build', test: 'make test' },
-silly resolved     devDependencies: { nodeunit: '>=0.6.4' },
-silly resolved     contributors: 
-silly resolved      [ { name: 'Antonio Salazar Cardozo',
-silly resolved          email: 'savedfastcool@gmail.com',
-silly resolved          url: 'https://github.com/Shadowfiend' },
-silly resolved        { name: 'Van Nguyen',
-silly resolved          email: 'the.gol.effect@gmail.com',
-silly resolved          url: 'https://github.com/thegoleffect' },
-silly resolved        { name: 'David Trejo',
-silly resolved          email: 'david@dtrejo.com',
-silly resolved          url: 'https://github.com/dtrejo' },
-silly resolved        { name: 'Ben Glow',
-silly resolved          email: 'glen.low@pixelglow.com',
-silly resolved          url: 'https://github.com/pixelglow' },
-silly resolved        { name: 'NewITFarmer.com',
-silly resolved          url: 'https://github.com/newitfarmer' },
-silly resolved        { name: 'Alfred Westerveld',
-silly resolved          email: 'alfredwesterveld@gmail.com',
-silly resolved          url: 'https://github.com/alfredwesterveld' },
-silly resolved        { name: 'Vincent Côté-Roy',
-silly resolved          email: 'vincentcr@gmail.com',
-silly resolved          url: 'https://github.com/vincentcr' },
-silly resolved        { name: 'Lloyd Hilaiel',
-silly resolved          email: 'lloyd@hilaiel.com',
-silly resolved          url: 'https://github.com/lloyd' },
-silly resolved        { name: 'Roman Shtylman',
-silly resolved          email: 'shtylman@gmail.com',
-silly resolved          url: 'https://github.com/shtylman' },
-silly resolved        { name: 'Vadim Graboys',
-silly resolved          email: 'dimva13@gmail.com',
-silly resolved          url: 'https://github.com/vadimg' },
-silly resolved        { name: 'Ben Noorduis', url: 'https://github.com/bnoordhuis' } ],
-silly resolved     _id: 'bcrypt@0.5.0',
-silly resolved     dependencies: {},
+silly resolved        url: 'git://github.com/masylum/connect-mongodb.git' },
+silly resolved     dependencies: { mongodb: '0.9.7', connect: '1.8.5' },
+silly resolved     devDependencies: { testosterone: '1.2.0', gently: '0.9.1', funk: '1.5.0' },
+silly resolved     main: './lib/connect-mongodb',
+silly resolved     _id: 'connect-mongodb@1.1.3',
+silly resolved     engines: { node: '*' },
 silly resolved     _engineSupported: true,
-silly resolved     _npmVersion: '1.1.0-beta-10',
-silly resolved     _nodeVersion: 'v0.6.7',
+silly resolved     _npmVersion: '1.0.103',
+silly resolved     _nodeVersion: 'v0.5.10',
 silly resolved     _defaultsLoaded: true,
-silly resolved     dist: { shasum: '758d09ba6580678e9021b030820957a21d922cab' } } ]
-info into D:\git\Missive bcrypt@0.5.0
-info installOne bcrypt@0.5.0
-info unbuild D:\git\Missive\node_modules\bcrypt
-verbose from cache C:\Users\Daniel\AppData\Roaming\npm-cache\bcrypt\0.5.0\package\package.json
-verbose mkdir (expected) error ENOENT, no such file or directory 'D:\git\Missive\node_modules\___bcrypt.npm'
-verbose mkdir done: D:\git\Missive\node_modules\___bcrypt.npm 755
+silly resolved     scripts: {} } ]
+info into C:\git\Missive connect-mongodb@1.1.3
+info installOne connect-mongodb@1.1.3
+info unbuild C:\git\Missive\node_modules\connect-mongodb
+verbose from cache C:\Users\dwn.GAIA2000\npm-cache\connect-mongodb\1.1.3\package\package.json
+verbose mkdir (expected) error ENOENT, The operation completed successfully.
+verbose mkdir (expected) error  'C:\git\Missive\node_modules\___connect-mongodb.npm'
+verbose mkdir done: C:\git\Missive\node_modules\___connect-mongodb.npm 755
 verbose unpack_ uid, gid [ undefined, undefined ]
-verbose unpackTarget D:\git\Missive\node_modules\bcrypt
+verbose unpackTarget C:\git\Missive\node_modules\connect-mongodb
 silly gunzTarPerm modes [ '755', '644' ]
-silly afterUntar undefined
-verbose gunzed D:\git\Missive\node_modules\___bcrypt.npm\package
-verbose rm'ed D:\git\Missive\node_modules\bcrypt
-verbose renamed [ 'D:\\git\\Missive\\node_modules\\___bcrypt.npm\\package',
-verbose renamed   'D:\\git\\Missive\\node_modules\\bcrypt' ]
-verbose has wscript [ undefined,
-verbose has wscript   { file: 'D:\\git\\Missive\\node_modules\\bcrypt\\package.json',
-verbose has wscript     contributors: false,
-verbose has wscript     serverjs: false,
-verbose has wscript     wscript: true } ]
-verbose caching D:\git\Missive\node_modules\bcrypt\package.json
-verbose loadDefaults bcrypt@0.5.0
-info preinstall bcrypt@0.5.0
-verbose from cache D:\git\Missive\node_modules\bcrypt\package.json
-verbose into D:\git\Missive\node_modules\bcrypt []
+silly spawning [ 'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\deps\\basic-bsdtar-2.8.3-1-mingw32-bin\\basic-bsdtar.exe',
+silly spawning   [ '-zmvxpf',
+silly spawning     'C:\\Users\\dwn.GAIA2000\\npm-cache\\connect-mongodb\\1.1.3\\package.tgz' ],
+silly spawning   'C:/git/Missive/node_modules/___connect-mongodb.npm' ]
+silly tar err x package/.npmignore
+silly tar err x package/index.js
+silly tar err x package/Readme.md
+silly tar err x package/package.json
+silly tar err x package/Makefile
+silly tar err x package/lib/connect-mongodb.js
+silly tar err x package/example/index.js
+silly tar err x package/tests/core.js
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\.npmignore
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\Makefile
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\package.json
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\Readme.md
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\example
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\example\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\lib
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\lib\connect-mongodb.js
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\tests
+silly asyncMap in gTP C:\git\Missive\node_modules\___connect-mongodb.npm\package\tests\core.js
+silly chmod package 755
+silly chmod .npmignore 644
+silly chmod index.js 644
+silly chmod Makefile 644
+silly chmod package.json 644
+silly chmod Readme.md 644
+silly chmod example 755
+silly chmod index.js 644
+silly chmod lib 755
+silly chmod connect-mongodb.js 644
+silly chmod tests 755
+silly chmod core.js 644
+verbose gunzed C:\git\Missive\node_modules\___connect-mongodb.npm\package
+verbose rm'ed C:\git\Missive\node_modules\connect-mongodb
+verbose renamed [ 'C:\\git\\Missive\\node_modules\\___connect-mongodb.npm\\package',
+verbose renamed   'C:\\git\\Missive\\node_modules\\connect-mongodb' ]
+silly testEngine { name: 'connect-mongodb',
+silly testEngine   description: 'mongodb session store for connect',
+silly testEngine   version: '1.1.3',
+silly testEngine   author: { name: 'Vladimir Dronnikov', email: 'dronnikov@gmail.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Pau Ramon', email: 'masylum@gmail.com' },
+silly testEngine      { name: 'ramv' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/masylum/connect-mongodb.git' },
+silly testEngine   dependencies: { mongodb: '0.9.7', connect: '1.8.5' },
+silly testEngine   devDependencies: { testosterone: '1.2.0', gently: '0.9.1', funk: '1.5.0' },
+silly testEngine   main: './lib/connect-mongodb',
+silly testEngine   _id: 'connect-mongodb@1.1.3',
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   scripts: {} }
+verbose caching C:\git\Missive\node_modules\connect-mongodb\package.json
+verbose loadDefaults connect-mongodb@1.1.3
+info preinstall connect-mongodb@1.1.3
+verbose from cache C:\git\Missive\node_modules\connect-mongodb\package.json
+verbose into C:\git\Missive\node_modules\connect-mongodb [ 'mongodb@0.9.7', 'connect@1.8.5' ]
+verbose cache add connect@1.8.5
+verbose cache add [ 'connect@1.8.5', null ]
+silly cache add: name, spec, args [ undefined, 'connect@1.8.5', [ 'connect@1.8.5', null ] ]
+verbose parsed url { pathname: 'connect@1.8.5', href: 'connect@1.8.5' }
+silly cache add: name, spec, args [ 'connect', '1.8.5', [ 'connect', '1.8.5' ] ]
+verbose parsed url { pathname: '1.8.5', href: '1.8.5' }
+info addNamed [ 'connect', '1.8.5' ]
+verbose addNamed [ '1.8.5', '1.8.5' ]
+verbose cache add mongodb@0.9.7
+verbose cache add [ 'mongodb@0.9.7', null ]
+silly cache add: name, spec, args [ undefined, 'mongodb@0.9.7', [ 'mongodb@0.9.7', null ] ]
+verbose parsed url { pathname: 'mongodb@0.9.7', href: 'mongodb@0.9.7' }
+silly cache add: name, spec, args [ 'mongodb', '0.9.7', [ 'mongodb', '0.9.7' ] ]
+verbose parsed url { pathname: '0.9.7', href: '0.9.7' }
+info addNamed [ 'mongodb', '0.9.7' ]
+verbose addNamed [ '0.9.7', '0.9.7' ]
+verbose GET connect/1.8.5
+verbose raw, before any munging connect/1.8.5
+verbose url resolving [ 'https://registry.npmjs.org/', './connect/1.8.5' ]
+verbose url resolved https://registry.npmjs.org/connect/1.8.5
+verbose etag "9X8QGROIFM9YZ25BLK099J0ZN"
+verbose GET mongodb/0.9.7
+verbose raw, before any munging mongodb/0.9.7
+verbose url resolving [ 'https://registry.npmjs.org/', './mongodb/0.9.7' ]
+verbose url resolved https://registry.npmjs.org/mongodb/0.9.7
+verbose etag "Z9R8O93CPGJNX8085WO9TTD8"
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"Z9R8O93CPGJNX8085WO9TTD8"',
+silly get cb     date: 'Mon, 13 Feb 2012 07:59:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag mongodb/0.9.7 from cache
+verbose bin dist [ null,
+verbose bin dist   { shasum: '1f1a21b68096663e1c4709f132c4de886feba1c3',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mongodb/-/mongodb-0.9.7.tgz' } ]
+silly testEngine { name: 'mongodb',
+silly testEngine   description: 'A node.js driver for MongoDB',
+silly testEngine   keywords: [ 'mongodb', 'mongo', 'driver', 'db' ],
+silly testEngine   version: '0.9.7',
+silly testEngine   author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Aaron Heckmann' },
+silly testEngine      { name: 'Christoph Pojer' },
+silly testEngine      { name: 'Pau Ramon Revilla' },
+silly testEngine      { name: 'Nathan White' },
+silly testEngine      { name: 'Emmerman' },
+silly testEngine      { name: 'Seth LaForge' },
+silly testEngine      { name: 'Boris Filipov' },
+silly testEngine      { name: 'Stefan Schärmeli' },
+silly testEngine      { name: 'Tedde Lundgren' },
+silly testEngine      { name: 'renctan' },
+silly testEngine      { name: 'Sergey Ukustov' },
+silly testEngine      { name: 'Ciaran Jessup' },
+silly testEngine      { name: 'kuno' },
+silly testEngine      { name: 'srimonti' },
+silly testEngine      { name: 'Erik Abele' },
+silly testEngine      { name: 'Pratik Daga' },
+silly testEngine      { name: 'Slobodan Utvic' },
+silly testEngine      { name: 'Kristina Chodorow' },
+silly testEngine      { name: 'Yonathan Randolph' },
+silly testEngine      { name: 'Brian Noguchi' },
+silly testEngine      { name: 'Sam Epstein' },
+silly testEngine      { name: 'James Harrison Fisher' },
+silly testEngine      { name: 'Vladimir Dronnikov' },
+silly testEngine      { name: 'Ben Hockey' },
+silly testEngine      { name: 'Henrik Johansson' },
+silly testEngine      { name: 'Simon Weare' },
+silly testEngine      { name: 'Alex Gorbatchev' },
+silly testEngine      { name: 'Shimon Doodkin' },
+silly testEngine      { name: 'Kyle Mueller' },
+silly testEngine      { name: 'Eran Hammer-Lahav' },
+silly testEngine      { name: 'Marcin Ciszak' },
+silly testEngine      { name: 'François de Metz' },
+silly testEngine      { name: 'Vinay Pulim' },
+silly testEngine      { name: 'nstielau' },
+silly testEngine      { name: 'Adam Wiggins' },
+silly testEngine      { name: 'entrinzikyl' },
+silly testEngine      { name: 'Jeremy Selier' },
+silly testEngine      { name: 'Ian Millington' },
+silly testEngine      { name: 'Public Keating' },
+silly testEngine      { name: 'andrewjstone' },
+silly testEngine      { name: 'Christopher Stott' },
+silly testEngine      { name: 'Corey Jewett' },
+silly testEngine      { name: 'brettkiefer' },
+silly testEngine      { name: 'Rob Holland' },
+silly testEngine      { name: 'Senmiao Liu' },
+silly testEngine      { name: 'heroic' },
+silly testEngine      { name: 'gitfy' },
+silly testEngine      { name: 'Andrew Stone' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/christkv/node-mongodb-native.git' },
+silly testEngine   bugs: 
+silly testEngine    { email: 'node-mongodb-native@googlegroups.com',
+silly testEngine      url: 'http://github.com/christkv/node-mongodb-native/issues' },
+silly testEngine   os: [ 'linux', 'darwin', 'freebsd' ],
+silly testEngine   config: { native: false },
+silly testEngine   main: './lib/mongodb/index',
+silly testEngine   directories: { lib: './lib/mongodb' },
+silly testEngine   engines: { node: '>=0.4.0' },
+silly testEngine   scripts: { install: 'bash ./install.sh' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'Apache License, Version 2.0',
+silly testEngine        url: 'http://www.apache.org/licenses/LICENSE-2.0' } ],
+silly testEngine   _id: 'mongodb@0.9.7',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\Users\dwn.GAIA2000\npm-cache\mongodb\0.9.7\package\package.json
+verbose loadDefaults mongodb@0.9.7
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"9X8QGROIFM9YZ25BLK099J0ZN"',
+silly get cb     date: 'Mon, 13 Feb 2012 07:59:39 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag connect/1.8.5 from cache
+verbose bin dist [ null,
+verbose bin dist   { shasum: 'e7ec35a6598d96b6c2dadab817152b406b35d949',
+verbose bin dist     tarball: 'http://registry.npmjs.org/connect/-/connect-1.8.5.tgz' } ]
+silly testEngine { name: 'connect',
+silly testEngine   version: '1.8.5',
+silly testEngine   description: 'High performance middleware framework',
+silly testEngine   keywords: [ 'framework', 'web', 'middleware', 'connect', 'rack' ],
+silly testEngine   repository: { type: 'git', url: 'git://github.com/senchalabs/connect.git' },
+silly testEngine   author: 
+silly testEngine    { name: 'TJ Holowaychuk',
+silly testEngine      email: 'tj@vision-media.ca',
+silly testEngine      url: 'http://tjholowaychuk.com' },
+silly testEngine   dependencies: { qs: '>= 0.4.0', mime: '>= 0.0.1', formidable: '1.0.x' },
+silly testEngine   devDependencies: 
+silly testEngine    { expresso: '0.9.2',
+silly testEngine      koala: '0.1.2',
+silly testEngine      less: '1.1.1',
+silly testEngine      sass: '0.5.0',
+silly testEngine      markdown: '0.2.1',
+silly testEngine      ejs: '0.4.3',
+silly testEngine      should: '0.3.2' },
+silly testEngine   main: 'index',
+silly testEngine   engines: { node: '>= 0.4.1 < 0.7.0' },
+silly testEngine   _id: 'connect@1.8.5',
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\Users\dwn.GAIA2000\npm-cache\connect\1.8.5\package\package.json
+verbose loadDefaults connect@1.8.5
+silly resolved [ { name: 'mongodb',
+silly resolved     description: 'A node.js driver for MongoDB',
+silly resolved     keywords: [ 'mongodb', 'mongo', 'driver', 'db' ],
+silly resolved     version: '0.9.7',
+silly resolved     author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Aaron Heckmann' },
+silly resolved        { name: 'Christoph Pojer' },
+silly resolved        { name: 'Pau Ramon Revilla' },
+silly resolved        { name: 'Nathan White' },
+silly resolved        { name: 'Emmerman' },
+silly resolved        { name: 'Seth LaForge' },
+silly resolved        { name: 'Boris Filipov' },
+silly resolved        { name: 'Stefan Schärmeli' },
+silly resolved        { name: 'Tedde Lundgren' },
+silly resolved        { name: 'renctan' },
+silly resolved        { name: 'Sergey Ukustov' },
+silly resolved        { name: 'Ciaran Jessup' },
+silly resolved        { name: 'kuno' },
+silly resolved        { name: 'srimonti' },
+silly resolved        { name: 'Erik Abele' },
+silly resolved        { name: 'Pratik Daga' },
+silly resolved        { name: 'Slobodan Utvic' },
+silly resolved        { name: 'Kristina Chodorow' },
+silly resolved        { name: 'Yonathan Randolph' },
+silly resolved        { name: 'Brian Noguchi' },
+silly resolved        { name: 'Sam Epstein' },
+silly resolved        { name: 'James Harrison Fisher' },
+silly resolved        { name: 'Vladimir Dronnikov' },
+silly resolved        { name: 'Ben Hockey' },
+silly resolved        { name: 'Henrik Johansson' },
+silly resolved        { name: 'Simon Weare' },
+silly resolved        { name: 'Alex Gorbatchev' },
+silly resolved        { name: 'Shimon Doodkin' },
+silly resolved        { name: 'Kyle Mueller' },
+silly resolved        { name: 'Eran Hammer-Lahav' },
+silly resolved        { name: 'Marcin Ciszak' },
+silly resolved        { name: 'François de Metz' },
+silly resolved        { name: 'Vinay Pulim' },
+silly resolved        { name: 'nstielau' },
+silly resolved        { name: 'Adam Wiggins' },
+silly resolved        { name: 'entrinzikyl' },
+silly resolved        { name: 'Jeremy Selier' },
+silly resolved        { name: 'Ian Millington' },
+silly resolved        { name: 'Public Keating' },
+silly resolved        { name: 'andrewjstone' },
+silly resolved        { name: 'Christopher Stott' },
+silly resolved        { name: 'Corey Jewett' },
+silly resolved        { name: 'brettkiefer' },
+silly resolved        { name: 'Rob Holland' },
+silly resolved        { name: 'Senmiao Liu' },
+silly resolved        { name: 'heroic' },
+silly resolved        { name: 'gitfy' },
+silly resolved        { name: 'Andrew Stone' } ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/christkv/node-mongodb-native.git' },
+silly resolved     bugs: 
+silly resolved      { email: 'node-mongodb-native@googlegroups.com',
+silly resolved        url: 'http://github.com/christkv/node-mongodb-native/issues' },
+silly resolved     os: [ 'linux', 'darwin', 'freebsd' ],
+silly resolved     config: { native: false },
+silly resolved     main: './lib/mongodb/index',
+silly resolved     directories: { lib: './lib/mongodb' },
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     scripts: { install: 'bash ./install.sh' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'Apache License, Version 2.0',
+silly resolved          url: 'http://www.apache.org/licenses/LICENSE-2.0' } ],
+silly resolved     _id: 'mongodb@0.9.7',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.0.103',
+silly resolved     _nodeVersion: 'v0.5.10',
+silly resolved     _defaultsLoaded: true },
+silly resolved   { name: 'connect',
+silly resolved     version: '1.8.5',
+silly resolved     description: 'High performance middleware framework',
+silly resolved     keywords: [ 'framework', 'web', 'middleware', 'connect', 'rack' ],
+silly resolved     repository: { type: 'git', url: 'git://github.com/senchalabs/connect.git' },
+silly resolved     author: 
+silly resolved      { name: 'TJ Holowaychuk',
+silly resolved        email: 'tj@vision-media.ca',
+silly resolved        url: 'http://tjholowaychuk.com' },
+silly resolved     dependencies: { qs: '>= 0.4.0', mime: '>= 0.0.1', formidable: '1.0.x' },
+silly resolved     devDependencies: 
+silly resolved      { expresso: '0.9.2',
+silly resolved        koala: '0.1.2',
+silly resolved        less: '1.1.1',
+silly resolved        sass: '0.5.0',
+silly resolved        markdown: '0.2.1',
+silly resolved        ejs: '0.4.3',
+silly resolved        should: '0.3.2' },
+silly resolved     main: 'index',
+silly resolved     engines: { node: '>= 0.4.1 < 0.7.0' },
+silly resolved     _id: 'connect@1.8.5',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.0.103',
+silly resolved     _nodeVersion: 'v0.5.10',
+silly resolved     _defaultsLoaded: true } ]
+info into C:\git\Missive\node_modules\connect-mongodb mongodb@0.9.7
+info into C:\git\Missive\node_modules\connect-mongodb connect@1.8.5
+info installOne mongodb@0.9.7
+info installOne connect@1.8.5
+info unbuild C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb
+info unbuild C:\git\Missive\node_modules\connect-mongodb\node_modules\connect
+verbose from cache C:\Users\dwn.GAIA2000\npm-cache\mongodb\0.9.7\package\package.json
+verbose from cache C:\Users\dwn.GAIA2000\npm-cache\connect\1.8.5\package\package.json
+verbose mkdir (expected) error ENOENT, The operation completed successfully.
+verbose mkdir (expected) error  'C:\git\Missive\node_modules\connect-mongodb\node_modules'
+verbose mkdir (expected) error ENOENT, The operation completed successfully.
+verbose mkdir (expected) error  'C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm'
+verbose mkdir done: C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb
+silly gunzTarPerm modes [ '755', '644' ]
+silly spawning [ 'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\deps\\basic-bsdtar-2.8.3-1-mingw32-bin\\basic-bsdtar.exe',
+silly spawning   [ '-zmvxpf',
+silly spawning     'C:\\Users\\dwn.GAIA2000\\npm-cache\\mongodb\\0.9.7\\package.tgz' ],
+silly spawning   'C:/git/Missive/node_modules/connect-mongodb/node_modules/___mongodb.npm' ]
+silly tar err x package/.npmignore
+silly tar err x package/HISTORY
+silly tar err x package/index.js
+silly tar err x package/install.sh
+silly tar err x package/Makefile
+silly tar err x package/package.json
+silly tar err x package/Readme.md
+silly tar err x package/TODO
+silly tar err x package/articles/NodeKOArticle1.md
+silly tar err x package/articles/NodeKOArticle2.md
+silly tar err x package/docs/collections.md
+silly tar err x package/docs/database.md
+silly tar err x package/docs/gridfs.md
+silly tar err x package/docs/indexes.md
+silly tar err x package/docs/insert.md
+silly tar err x package/docs/queries.md
+silly tar err x package/docs/README.md
+silly tar err x package/docs/replicaset.md
+silly tar err x package/examples/admin.js
+silly tar err x package/examples/blog.js
+silly tar err x package/examples/capped.js
+silly tar err x package/examples/cursor.js
+silly tar err x package/examples/gridfs.js
+silly tar err x package/examples/index.js
+silly tar err x package/examples/info.js
+silly tar err x package/examples/oplog.js
+silly tar err x package/examples/queries.js
+silly tar err x package/examples/replSetServersQueries.js
+silly tar err x package/examples/replSetServersSimple.js
+silly tar err x package/examples/simple.js
+silly tar err x package/examples/strict.js
+silly tar err x package/examples/types.js
+silly tar err x package/examples/url.js
+silly tar err x package/tools/gleak.js
+silly tar err x package/tools/test_all.js
+silly tar err x package/test/admin_test.js
+silly tar err x package/test/collection_test.js
+silly tar err x package/test/connection_test.js
+silly tar err x package/test/connect_test.js
+silly tar err x package/test/cursor_test.js
+silly tar err x package/test/custom_pk_test.js
+silly tar err x package/test/db_test.js
+silly tar err x package/test/error_test.js
+silly tar err x package/test/find_test.js
+silly tar err x package/test/index_test.js
+silly tar err x package/test/insert_test.js
+silly tar err x package/test/authentication_test.js
+silly tar err x package/test/map_reduce_test.js
+silly tar err x package/test/objectid_test.js
+silly tar err x package/test/raw_test.js
+silly tar err x package/test/regexp_test.js
+silly tar err x package/test/remove_test.js
+silly tar err x package/test/streaming_test.js
+silly tar err x package/test/unicode_test.js
+silly tar err x package/test/exception_handling_test.js
+silly tar err x package/test/multiple_dbs_on_connection_pool_test.js
+silly tar err x package/test/bson/bson_test.js
+silly tar err x package/test/bson/commands_test.js
+silly tar err x package/test/auxilliary/authentication_test.js
+silly tar err x package/test/auxilliary/replicaset_auth_test.js
+silly tar err x package/test/replicaset/connect_test.js
+silly tar err x package/test/replicaset/count_test.js
+silly tar err x package/test/replicaset/insert_test.js
+silly tar err x package/test/replicaset/query_secondaries_test.js
+silly tar err x package/test/replicaset/two_server_tests.js
+silly tar err x package/test/tools/keyfile.txt
+silly tar err x package/test/tools/replica_set_manager.js
+silly tar err x package/test/tools/server_manager.js
+silly tar err x package/test/connection/connection_pool_test.js
+silly tar err x package/test/connection/message_parser_test.js
+silly tar err x package/test/gridstore/grid_store_file_test.js
+silly tar err x package/test/gridstore/grid_store_test.js
+silly tar err x package/test/gridstore/grid_test.js
+silly tar err x package/test/gridstore/grid_store_stream_test.js
+silly tar err x package/test/gridstore/test_gs_weird_bug.png
+silly tar err x package/test/gridstore/test_gs_working_field_read.pdf
+silly tar err x package/test/gridstore/iya_logo_final_bw.jpg
+silly tar err x package/external-libs/bson/binary.cc
+silly tar err x package/external-libs/bson/binary.h
+silly tar err x package/external-libs/bson/bson.cc
+silly tar err x package/external-libs/bson/bson.h
+silly tar err x package/external-libs/bson/code.cc
+silly tar err x package/external-libs/bson/code.h
+silly tar err x package/external-libs/bson/dbref.cc
+silly tar err x package/external-libs/bson/dbref.h
+silly tar err x package/external-libs/bson/double.cc
+silly tar err x package/external-libs/bson/double.h
+silly tar err x package/external-libs/bson/index.js
+silly tar err x package/external-libs/bson/local.cc
+silly tar err x package/external-libs/bson/local.h
+silly tar err x package/external-libs/bson/long.cc
+silly tar err x package/external-libs/bson/long.h
+silly tar err x package/external-libs/bson/Makefile
+silly tar err x package/external-libs/bson/maxkey.cc
+silly tar err x package/external-libs/bson/maxkey.h
+silly tar err x package/external-libs/bson/minkey.cc
+silly tar err x package/external-libs/bson/.gitignore
+silly tar err x package/external-libs/bson/minkey.h
+silly tar err x package/external-libs/bson/objectid.cc
+silly tar err x package/external-libs/bson/test_full_bson.js
+silly tar err x package/external-libs/bson/test_bson.js
+silly tar err x package/external-libs/bson/timestamp.cc
+silly tar err x package/external-libs/bson/timestamp.h
+silly tar err x package/external-libs/bson/wscript
+silly tar err x package/external-libs/bson/symbol.cc
+silly tar err x package/external-libs/bson/objectid.h
+silly tar err x package/external-libs/bson/symbol.h
+silly tar err x package/lib/mongodb/admin.js
+silly tar err x package/lib/mongodb/collection.js
+silly tar err x package/lib/mongodb/db.js
+silly tar err x package/lib/mongodb/index.js
+silly tar err x package/lib/mongodb/cursor.js
+silly tar err x package/lib/mongodb/bson/binary.js
+silly tar err x package/lib/mongodb/bson/binary_parser.js
+silly tar err x package/lib/mongodb/bson/binary_utils.js
+silly tar err x package/lib/mongodb/bson/bson.js
+silly tar err x package/lib/mongodb/bson/double.js
+silly tar err x package/lib/mongodb/bson/float_parser.js
+silly tar err x package/lib/mongodb/bson/objectid.js
+silly tar err x package/lib/mongodb/bson/timestamp.js
+silly tar err x package/lib/mongodb/commands/base_command.js
+silly tar err x package/lib/mongodb/commands/db_command.js
+silly tar err x package/lib/mongodb/commands/delete_command.js
+silly tar err x package/lib/mongodb/commands/get_more_command.js
+silly tar err x package/lib/mongodb/commands/insert_command.js
+silly tar err x package/lib/mongodb/commands/kill_cursor_command.js
+silly tar err x package/lib/mongodb/commands/query_command.js
+silly tar err x package/lib/mongodb/commands/update_command.js
+silly tar err x package/lib/mongodb/connection/connection.js
+silly tar err x package/lib/mongodb/connection/connection_pool.js
+silly tar err x package/lib/mongodb/connection/connection_utils.js
+silly tar err x package/lib/mongodb/connection/repl_set_servers.js
+silly tar err x package/lib/mongodb/connection/server.js
+silly tar err x package/lib/mongodb/connection/simple_emitter.js
+silly tar err x package/lib/mongodb/gridfs/chunk.js
+silly tar err x package/lib/mongodb/gridfs/grid.js
+silly tar err x package/lib/mongodb/gridfs/gridstore.js
+silly tar err x package/lib/mongodb/responses/mongo_reply.js
+silly tar err x package/lib/mongodb/goog/math/long.js
+silly tar err x package/deps/step/package.json
+silly tar err x package/deps/step/README.markdown
+silly tar err x package/deps/step/lib/step.js
+silly tar err x package/deps/step/test/errorTest.js
+silly tar err x package/deps/step/test/fnTest.js
+silly tar err x package/deps/step/test/groupTest.js
+silly tar err x package/deps/step/test/helper.js
+silly tar err x package/deps/step/test/parallelTest.js
+silly tar err x package/deps/step/test/callbackTest.js
+silly tar err x package/deps/gleak/.gitignore
+silly tar err x package/deps/gleak/History.md
+silly tar err x package/deps/gleak/index.js
+silly tar err x package/deps/gleak/Makefile
+silly tar err x package/deps/gleak/package.json
+silly tar err x package/deps/gleak/README.md
+silly tar err x package/deps/gleak/test/index.js
+silly tar err x package/deps/nodeunit/CONTRIBUTORS.md
+silly tar err x package/deps/nodeunit/index.js
+silly tar err x package/deps/nodeunit/LICENSE
+silly tar err x package/deps/nodeunit/Makefile
+silly tar err x package/deps/nodeunit/nodelint.cfg
+silly tar err x package/deps/nodeunit/package.json
+silly tar err x package/deps/nodeunit/README.md
+silly tar err x package/deps/nodeunit/.npmignore
+silly tar err x package/deps/nodeunit/bin/nodeunit
+silly tar err x package/deps/nodeunit/bin/nodeunit.json
+silly tar err x package/deps/nodeunit/deps/async.js
+silly tar err x package/deps/nodeunit/deps/json2.js
+silly tar err x package/deps/nodeunit/deps/ejs.js
+silly tar err x package/deps/nodeunit/doc/nodeunit.md
+silly tar err x package/deps/nodeunit/img/example_pass.png
+silly tar err x package/deps/nodeunit/img/example_fail.png
+silly tar err x package/deps/nodeunit/man1/nodeunit.1
+silly tar err x package/deps/nodeunit/share/license.js
+silly tar err x package/deps/nodeunit/share/nodeunit.css
+silly tar err x package/deps/nodeunit/share/junit.xml.ejs
+silly tar err x package/deps/nodeunit/examples/browser/nodeunit.js
+silly tar err x package/deps/nodeunit/examples/browser/suite1.js
+silly tar err x package/deps/nodeunit/examples/browser/suite2.js
+silly tar err x package/deps/nodeunit/examples/browser/test.html
+silly tar err x package/deps/nodeunit/lib/assert.js
+silly tar err x package/deps/nodeunit/lib/core.js
+silly tar err x package/deps/nodeunit/lib/nodeunit.js
+silly tar err x package/deps/nodeunit/lib/track.js
+silly tar err x package/deps/nodeunit/lib/types.js
+silly tar err x package/deps/nodeunit/lib/utils.js
+silly tar err x package/deps/nodeunit/lib/reporters/browser.js
+silly tar err x package/deps/nodeunit/lib/reporters/default.js
+silly tar err x package/deps/nodeunit/lib/reporters/html.js
+silly tar err x package/deps/nodeunit/lib/reporters/index.js
+silly tar err x package/deps/nodeunit/lib/reporters/junit.js
+silly tar err x package/deps/nodeunit/lib/reporters/minimal.js
+silly tar err x package/deps/nodeunit/lib/reporters/skip_passed.js
+silly tar err x package/deps/nodeunit/test/test-base.js
+silly tar err x package/deps/nodeunit/test/test-failing-callbacks.js
+silly tar err x package/deps/nodeunit/test/test-httputil.js
+silly tar err x package/deps/nodeunit/test/test-runfiles.js
+silly tar err x package/deps/nodeunit/test/test-runmodule.js
+silly tar err x package/deps/nodeunit/test/test-runtest.js
+silly tar err x package/deps/nodeunit/test/test-sandbox.js
+silly tar err x package/deps/nodeunit/test/test-testcase.js
+silly tar err x package/deps/nodeunit/test/test.html
+silly tar err x package/deps/nodeunit/test/fixtures/mock_module1.js
+silly tar err x package/deps/nodeunit/test/fixtures/mock_module2.js
+silly tar err x package/deps/nodeunit/test/fixtures/raw_jscode1.js
+silly tar err x package/deps/nodeunit/test/fixtures/raw_jscode2.js
+silly tar err x package/deps/nodeunit/test/fixtures/raw_jscode3.js
+silly tar err x package/deps/nodeunit/test/fixtures/coffee/mock_coffee_module.coffee
+silly tar err x package/deps/nodeunit/test/fixtures/dir/mock_module4.js
+silly tar err x package/deps/nodeunit/test/fixtures/dir/mock_module3.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\.npmignore
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\HISTORY
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\install.sh
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\Makefile
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\package.json
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\Readme.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\TODO
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\articles
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\articles\NodeKOArticle1.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\articles\NodeKOArticle2.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\admin.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\blog.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\capped.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\gridfs.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\oplog.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\cursor.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\queries.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\info.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\replSetServersSimple.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\simple.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\strict.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\types.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\url.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\examples\replSetServersQueries.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\tools
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\tools\gleak.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\tools\test_all.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\collections.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\database.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\gridfs.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\insert.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\queries.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\indexes.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\README.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\docs\replicaset.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\.gitignore
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\binary.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\bson.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\bson.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\code.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\code.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\dbref.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\dbref.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\double.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\double.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\binary.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\local.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\long.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\long.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\local.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\maxkey.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\Makefile
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\minkey.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\minkey.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\objectid.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\objectid.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\symbol.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\test_bson.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\test_full_bson.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\timestamp.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\timestamp.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\wscript
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\maxkey.h
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\external-libs\bson\symbol.cc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\admin_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\authentication_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\collection_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\connection_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\connect_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\cursor_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\custom_pk_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\db_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\error_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\exception_handling_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\find_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\index_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\insert_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\map_reduce_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\multiple_dbs_on_connection_pool_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\objectid_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\raw_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\regexp_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\remove_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\streaming_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\unicode_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\auxilliary
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\auxilliary\authentication_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\auxilliary\replicaset_auth_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\bson
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\bson\commands_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\bson\bson_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\connection
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\connection\connection_pool_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\connection\message_parser_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\grid_store_stream_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\grid_store_file_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\grid_store_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\iya_logo_final_bw.jpg
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\grid_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\test_gs_weird_bug.png
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\gridstore\test_gs_working_field_read.pdf
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\replicaset
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\replicaset\connect_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\replicaset\count_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\replicaset\insert_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\replicaset\query_secondaries_test.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\replicaset\two_server_tests.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\tools
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\tools\keyfile.txt
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\tools\replica_set_manager.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\test\tools\server_manager.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\admin.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\collection.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\cursor.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\db.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection\connection.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection\connection_pool.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection\repl_set_servers.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection\connection_utils.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection\server.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\connection\simple_emitter.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\gridfs
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\gridfs\chunk.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\gridfs\grid.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\gridfs\gridstore.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\responses
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\responses\mongo_reply.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\base_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\db_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\delete_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\insert_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\get_more_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\kill_cursor_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\query_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\commands\update_command.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\goog
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\goog\math
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\goog\math\long.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\binary.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\binary_parser.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\binary_utils.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\bson.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\double.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\float_parser.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\objectid.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\lib\mongodb\bson\timestamp.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\.gitignore
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\History.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\Makefile
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\package.json
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\README.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\test
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\gleak\test\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\package.json
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\README.markdown
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\lib
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\lib\step.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test\callbackTest.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test\errorTest.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test\fnTest.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test\groupTest.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test\helper.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\step\test\parallelTest.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\.npmignore
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\CONTRIBUTORS.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\LICENSE
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\Makefile
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\nodelint.cfg
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\package.json
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\README.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\bin
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\bin\nodeunit
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\bin\nodeunit.json
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\man1
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\man1\nodeunit.1
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\deps
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\deps\async.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\deps\ejs.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\deps\json2.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\img
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\img\example_fail.png
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\img\example_pass.png
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\share
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\share\junit.xml.ejs
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\share\license.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\share\nodeunit.css
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\doc
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\doc\nodeunit.md
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\examples
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\examples\browser
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\examples\browser\nodeunit.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\examples\browser\suite1.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\examples\browser\suite2.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\examples\browser\test.html
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-base.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-failing-callbacks.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-httputil.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-runfiles.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-runmodule.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-sandbox.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-runtest.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test-testcase.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\test.html
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\mock_module1.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\raw_jscode1.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\mock_module2.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\raw_jscode2.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\raw_jscode3.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\coffee
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\coffee\mock_coffee_module.coffee
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\dir
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\dir\mock_module4.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\test\fixtures\dir\mock_module3.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\assert.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\core.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\nodeunit.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\track.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\types.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\utils.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\browser.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\default.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\html.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\index.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\minimal.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\skip_passed.js
+silly asyncMap in gTP C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package\deps\nodeunit\lib\reporters\junit.js
+silly chmod package 755
+silly chmod .npmignore 644
+silly chmod HISTORY 644
+silly chmod index.js 644
+silly chmod install.sh 644
+silly chmod Makefile 644
+silly chmod package.json 644
+silly chmod Readme.md 644
+silly chmod TODO 644
+silly chmod articles 755
+silly chmod NodeKOArticle1.md 644
+silly chmod NodeKOArticle2.md 644
+silly chmod examples 755
+silly chmod admin.js 644
+silly chmod blog.js 644
+silly chmod capped.js 644
+silly chmod gridfs.js 644
+silly chmod index.js 644
+silly chmod oplog.js 644
+silly chmod cursor.js 644
+silly chmod queries.js 644
+silly chmod info.js 644
+silly chmod replSetServersSimple.js 644
+silly chmod simple.js 644
+silly chmod strict.js 644
+silly chmod types.js 644
+silly chmod url.js 644
+silly chmod replSetServersQueries.js 644
+silly chmod tools 755
+silly chmod gleak.js 644
+silly chmod test_all.js 644
+silly chmod docs 755
+silly chmod collections.md 644
+silly chmod database.md 644
+silly chmod gridfs.md 644
+silly chmod insert.md 644
+silly chmod queries.md 644
+silly chmod indexes.md 644
+silly chmod README.md 644
+silly chmod replicaset.md 644
+silly chmod external-libs 755
+silly chmod bson 755
+silly chmod .gitignore 644
+silly chmod binary.h 644
+silly chmod bson.cc 644
+silly chmod bson.h 644
+silly chmod code.cc 644
+silly chmod code.h 644
+silly chmod dbref.cc 644
+silly chmod dbref.h 644
+silly chmod double.cc 644
+silly chmod double.h 644
+silly chmod binary.cc 644
+silly chmod index.js 644
+silly chmod local.h 644
+silly chmod long.h 644
+silly chmod long.cc 644
+silly chmod local.cc 644
+silly chmod maxkey.cc 644
+silly chmod Makefile 644
+silly chmod minkey.h 644
+silly chmod minkey.cc 644
+silly chmod objectid.cc 644
+silly chmod objectid.h 644
+silly chmod symbol.h 644
+silly chmod test_bson.js 644
+silly chmod test_full_bson.js 644
+silly chmod timestamp.cc 644
+silly chmod timestamp.h 644
+silly chmod wscript 644
+silly chmod maxkey.h 644
+silly chmod symbol.cc 644
+silly chmod test 755
+silly chmod admin_test.js 644
+silly chmod authentication_test.js 644
+silly chmod collection_test.js 644
+silly chmod connection_test.js 644
+silly chmod connect_test.js 644
+silly chmod cursor_test.js 644
+silly chmod custom_pk_test.js 644
+silly chmod db_test.js 644
+silly chmod error_test.js 644
+silly chmod exception_handling_test.js 644
+silly chmod find_test.js 644
+silly chmod index_test.js 644
+silly chmod insert_test.js 644
+silly chmod map_reduce_test.js 644
+silly chmod multiple_dbs_on_connection_pool_test.js 644
+silly chmod objectid_test.js 644
+silly chmod raw_test.js 644
+silly chmod regexp_test.js 644
+silly chmod remove_test.js 644
+silly chmod streaming_test.js 644
+silly chmod unicode_test.js 644
+silly chmod auxilliary 755
+silly chmod authentication_test.js 644
+silly chmod replicaset_auth_test.js 644
+silly chmod bson 755
+silly chmod commands_test.js 644
+silly chmod bson_test.js 644
+silly chmod connection 755
+silly chmod connection_pool_test.js 644
+silly chmod message_parser_test.js 644
+silly chmod gridstore 755
+silly chmod grid_store_stream_test.js 644
+silly chmod grid_store_file_test.js 644
+silly chmod grid_store_test.js 644
+silly chmod iya_logo_final_bw.jpg 644
+silly chmod grid_test.js 644
+silly chmod test_gs_weird_bug.png 644
+silly chmod test_gs_working_field_read.pdf 644
+silly chmod replicaset 755
+silly chmod connect_test.js 644
+silly chmod count_test.js 644
+silly chmod insert_test.js 644
+silly chmod query_secondaries_test.js 644
+silly chmod two_server_tests.js 644
+silly chmod tools 755
+silly chmod keyfile.txt 644
+silly chmod replica_set_manager.js 644
+silly chmod server_manager.js 644
+silly chmod lib 755
+silly chmod mongodb 755
+silly chmod admin.js 644
+silly chmod collection.js 644
+silly chmod cursor.js 644
+silly chmod db.js 644
+silly chmod index.js 644
+silly chmod connection 755
+silly chmod connection.js 644
+silly chmod connection_pool.js 644
+silly chmod repl_set_servers.js 644
+silly chmod connection_utils.js 644
+silly chmod server.js 644
+silly chmod simple_emitter.js 644
+silly chmod gridfs 755
+silly chmod chunk.js 644
+silly chmod grid.js 644
+silly chmod gridstore.js 644
+silly chmod responses 755
+silly chmod mongo_reply.js 644
+silly chmod commands 755
+silly chmod base_command.js 644
+silly chmod db_command.js 644
+silly chmod delete_command.js 644
+silly chmod insert_command.js 644
+silly chmod get_more_command.js 644
+silly chmod kill_cursor_command.js 644
+silly chmod query_command.js 644
+silly chmod update_command.js 644
+silly chmod goog 755
+silly chmod math 755
+silly chmod long.js 644
+silly chmod bson 755
+silly chmod binary.js 644
+silly chmod binary_parser.js 644
+silly chmod binary_utils.js 644
+silly chmod bson.js 644
+silly chmod double.js 644
+silly chmod float_parser.js 644
+silly chmod objectid.js 644
+silly chmod timestamp.js 644
+silly chmod deps 755
+silly chmod gleak 755
+silly chmod .gitignore 644
+silly chmod History.md 644
+silly chmod index.js 644
+silly chmod Makefile 644
+silly chmod package.json 644
+silly chmod README.md 644
+silly chmod test 755
+silly chmod index.js 644
+silly chmod step 755
+silly chmod package.json 644
+silly chmod README.markdown 644
+silly chmod lib 755
+silly chmod step.js 644
+silly chmod test 755
+silly chmod callbackTest.js 644
+silly chmod errorTest.js 644
+silly chmod fnTest.js 644
+silly chmod groupTest.js 644
+silly chmod helper.js 644
+silly chmod parallelTest.js 644
+silly chmod nodeunit 755
+silly chmod .npmignore 644
+silly chmod CONTRIBUTORS.md 644
+silly chmod index.js 644
+silly chmod LICENSE 644
+silly chmod Makefile 644
+silly chmod nodelint.cfg 644
+silly chmod package.json 644
+silly chmod README.md 644
+silly chmod bin 755
+silly chmod nodeunit 644
+silly chmod nodeunit.json 644
+silly chmod man1 755
+silly chmod nodeunit.1 644
+silly chmod deps 755
+silly chmod async.js 644
+silly chmod ejs.js 644
+silly chmod json2.js 644
+silly chmod img 755
+silly chmod example_fail.png 644
+silly chmod example_pass.png 644
+silly chmod share 755
+silly chmod junit.xml.ejs 644
+silly chmod license.js 644
+silly chmod nodeunit.css 644
+silly chmod doc 755
+silly chmod nodeunit.md 644
+silly chmod examples 755
+silly chmod browser 755
+silly chmod nodeunit.js 644
+silly chmod suite1.js 644
+silly chmod suite2.js 644
+silly chmod test.html 644
+silly chmod test 755
+silly chmod test-base.js 644
+silly chmod test-failing-callbacks.js 644
+silly chmod test-httputil.js 644
+silly chmod test-runfiles.js 644
+silly chmod test-runmodule.js 644
+silly chmod test-sandbox.js 644
+silly chmod test-runtest.js 644
+silly chmod test-testcase.js 644
+silly chmod test.html 644
+silly chmod fixtures 755
+silly chmod mock_module1.js 644
+silly chmod raw_jscode1.js 644
+silly chmod mock_module2.js 644
+silly chmod raw_jscode2.js 644
+silly chmod raw_jscode3.js 644
+silly chmod coffee 755
+silly chmod mock_coffee_module.coffee 644
+silly chmod dir 755
+silly chmod mock_module4.js 644
+silly chmod mock_module3.js 644
+silly chmod lib 755
+silly chmod assert.js 644
+silly chmod core.js 644
+silly chmod nodeunit.js 644
+silly chmod track.js 644
+silly chmod types.js 644
+silly chmod utils.js 644
+silly chmod reporters 755
+silly chmod browser.js 644
+silly chmod default.js 644
+silly chmod html.js 644
+silly chmod index.js 644
+silly chmod minimal.js 644
+silly chmod skip_passed.js 644
+silly chmod junit.js 644
+verbose gunzed C:\git\Missive\node_modules\connect-mongodb\node_modules\___mongodb.npm\package
+verbose rm'ed C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb
+verbose renamed [ 'C:\\git\\Missive\\node_modules\\connect-mongodb\\node_modules\\___mongodb.npm\\package',
+verbose renamed   'C:\\git\\Missive\\node_modules\\connect-mongodb\\node_modules\\mongodb' ]
+silly testEngine { name: 'mongodb',
+silly testEngine   description: 'A node.js driver for MongoDB',
+silly testEngine   keywords: [ 'mongodb', 'mongo', 'driver', 'db' ],
+silly testEngine   version: '0.9.7',
+silly testEngine   author: { name: 'Christian Amor Kvalheim', email: 'christkv@gmail.com' },
+silly testEngine   contributors: 
+silly testEngine    [ { name: 'Aaron Heckmann' },
+silly testEngine      { name: 'Christoph Pojer' },
+silly testEngine      { name: 'Pau Ramon Revilla' },
+silly testEngine      { name: 'Nathan White' },
+silly testEngine      { name: 'Emmerman' },
+silly testEngine      { name: 'Seth LaForge' },
+silly testEngine      { name: 'Boris Filipov' },
+silly testEngine      { name: 'Stefan Schärmeli' },
+silly testEngine      { name: 'Tedde Lundgren' },
+silly testEngine      { name: 'renctan' },
+silly testEngine      { name: 'Sergey Ukustov' },
+silly testEngine      { name: 'Ciaran Jessup' },
+silly testEngine      { name: 'kuno' },
+silly testEngine      { name: 'srimonti' },
+silly testEngine      { name: 'Erik Abele' },
+silly testEngine      { name: 'Pratik Daga' },
+silly testEngine      { name: 'Slobodan Utvic' },
+silly testEngine      { name: 'Kristina Chodorow' },
+silly testEngine      { name: 'Yonathan Randolph' },
+silly testEngine      { name: 'Brian Noguchi' },
+silly testEngine      { name: 'Sam Epstein' },
+silly testEngine      { name: 'James Harrison Fisher' },
+silly testEngine      { name: 'Vladimir Dronnikov' },
+silly testEngine      { name: 'Ben Hockey' },
+silly testEngine      { name: 'Henrik Johansson' },
+silly testEngine      { name: 'Simon Weare' },
+silly testEngine      { name: 'Alex Gorbatchev' },
+silly testEngine      { name: 'Shimon Doodkin' },
+silly testEngine      { name: 'Kyle Mueller' },
+silly testEngine      { name: 'Eran Hammer-Lahav' },
+silly testEngine      { name: 'Marcin Ciszak' },
+silly testEngine      { name: 'François de Metz' },
+silly testEngine      { name: 'Vinay Pulim' },
+silly testEngine      { name: 'nstielau' },
+silly testEngine      { name: 'Adam Wiggins' },
+silly testEngine      { name: 'entrinzikyl' },
+silly testEngine      { name: 'Jeremy Selier' },
+silly testEngine      { name: 'Ian Millington' },
+silly testEngine      { name: 'Public Keating' },
+silly testEngine      { name: 'andrewjstone' },
+silly testEngine      { name: 'Christopher Stott' },
+silly testEngine      { name: 'Corey Jewett' },
+silly testEngine      { name: 'brettkiefer' },
+silly testEngine      { name: 'Rob Holland' },
+silly testEngine      { name: 'Senmiao Liu' },
+silly testEngine      { name: 'heroic' },
+silly testEngine      { name: 'gitfy' },
+silly testEngine      { name: 'Andrew Stone' } ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/christkv/node-mongodb-native.git' },
+silly testEngine   bugs: 
+silly testEngine    { email: 'node-mongodb-native@googlegroups.com',
+silly testEngine      url: 'http://github.com/christkv/node-mongodb-native/issues' },
+silly testEngine   os: [ 'linux', 'darwin', 'freebsd' ],
+silly testEngine   config: { native: false },
+silly testEngine   main: './lib/mongodb/index',
+silly testEngine   directories: { lib: './lib/mongodb' },
+silly testEngine   engines: { node: '>=0.4.0' },
+silly testEngine   scripts: { install: 'bash ./install.sh' },
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'Apache License, Version 2.0',
+silly testEngine        url: 'http://www.apache.org/licenses/LICENSE-2.0' } ],
+silly testEngine   _id: 'mongodb@0.9.7',
+silly testEngine   dependencies: {},
+silly testEngine   devDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.5.10',
+silly testEngine   _defaultsLoaded: true }
+verbose caching C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb\package.json
+verbose loadDefaults mongodb@0.9.7
+info preinstall mongodb@0.9.7
+verbose from cache C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb\package.json
+verbose into C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb []
 silly resolved []
-verbose about to build D:\git\Missive\node_modules\bcrypt
-info build D:\git\Missive\node_modules\bcrypt
-verbose from cache D:\git\Missive\node_modules\bcrypt\package.json
-verbose linkStuff [ false, false, false, 'D:\\git\\Missive\\node_modules' ]
-info linkStuff bcrypt@0.5.0
-verbose linkBins bcrypt@0.5.0
-verbose linkMans bcrypt@0.5.0
-verbose rebuildBundles bcrypt@0.5.0
-info install bcrypt@0.5.0
+verbose about to build C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb
+info build C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb
+verbose from cache C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb\package.json
+verbose linkStuff [ false,
+verbose linkStuff   false,
+verbose linkStuff   false,
+verbose linkStuff   'C:\\git\\Missive\\node_modules\\connect-mongodb\\node_modules' ]
+info linkStuff mongodb@0.9.7
+verbose linkBins mongodb@0.9.7
+verbose linkMans mongodb@0.9.7
+verbose rebuildBundles mongodb@0.9.7
+info install mongodb@0.9.7
 verbose unsafe-perm in lifecycle true
-silly exec cmd "/c" "make build"
+silly exec cmd "/c" "bash ./install.sh"
 silly spawning [ 'cmd',
-silly spawning   [ '/c', 'make build' ],
-silly spawning   'D:\\git\\Missive\\node_modules\\bcrypt' ]
-info bcrypt@0.5.0 Failed to exec install script
-ERR! error installing bcrypt@0.5.0
-info unbuild D:\git\Missive\node_modules\bcrypt
-verbose from cache D:\git\Missive\node_modules\bcrypt\package.json
-info preuninstall bcrypt@0.5.0
-info uninstall bcrypt@0.5.0
-verbose unbuild bcrypt@0.5.0 [ true,
-verbose unbuild bcrypt@0.5.0   'D:\\git\\Missive\\node_modules',
-verbose unbuild bcrypt@0.5.0   'D:\\git\\Missive\\node_modules' ]
-info postuninstall bcrypt@0.5.0
-verbose installOne cb bcrypt@0.5.0
-ERR! bcrypt@0.5.0 install: `make build`
-ERR! `cmd "/c" "make build"` failed with 1
+silly spawning   [ '/c', 'bash ./install.sh' ],
+silly spawning   'C:\\git\\Missive\\node_modules\\connect-mongodb\\node_modules\\mongodb' ]
+verbose mkdir (expected) error ENOENT, The operation completed successfully.
+verbose mkdir (expected) error  'C:\git\Missive\node_modules\connect-mongodb\node_modules\___connect.npm'
+verbose mkdir done: C:\git\Missive\node_modules\connect-mongodb\node_modules\___connect.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget C:\git\Missive\node_modules\connect-mongodb\node_modules\connect
+silly gunzTarPerm modes [ '755', '644' ]
+silly spawning [ 'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\deps\\basic-bsdtar-2.8.3-1-mingw32-bin\\basic-bsdtar.exe',
+silly spawning   [ '-zmvxpf',
+silly spawning     'C:\\Users\\dwn.GAIA2000\\npm-cache\\connect\\1.8.5\\package.tgz' ],
+silly spawning   'C:/git/Missive/node_modules/connect-mongodb/node_modules/___connect.npm' ]
+info mongodb@0.9.7 Failed to exec install script
+ERR! error installing mongodb@0.9.7 Error: mongodb@0.9.7 install: `bash ./install.sh`
+ERR! error installing mongodb@0.9.7 `cmd "/c" "bash ./install.sh"` failed with 1
+ERR! error installing mongodb@0.9.7     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\exec.js:49:20)
+ERR! error installing mongodb@0.9.7     at ChildProcess.emit (events.js:70:17)
+ERR! error installing mongodb@0.9.7     at maybeExit (child_process.js:336:16)
+ERR! error installing mongodb@0.9.7     at Process.onexit (child_process.js:371:5)
+info unbuild C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb
+verbose from cache C:\git\Missive\node_modules\connect-mongodb\node_modules\mongodb\package.json
+info preuninstall mongodb@0.9.7
+silly tar err x package/.npmignore
+silly tar err x package/index.js
+silly tar err x package/LICENSE
+silly tar err x package/test.js
+silly tar err x package/package.json
+silly tar err x package/lib/cache.js
+silly tar err x package/lib/connect.js
+silly tar err x package/lib/http.js
+silly tar err x package/lib/https.js
+silly tar err x package/lib/utils.js
+silly tar err x package/lib/index.js
+silly tar err x package/lib/patch.js
+silly tar err x package/lib/middleware/bodyParser.js
+silly tar err x package/lib/middleware/compiler.js
+silly tar err x package/lib/middleware/cookieParser.js
+silly tar err x package/lib/middleware/csrf.js
+info uninstall mongodb@0.9.7
+silly tar err x package/lib/middleware/directory.js
+verbose unbuild mongodb@0.9.7 [ false,
+verbose unbuild mongodb@0.9.7   'C:\\git\\Missive\\node_modules',
+verbose unbuild mongodb@0.9.7   'C:\\git\\Missive\\node_modules\\connect-mongodb\\node_modules' ]
+info postuninstall mongodb@0.9.7
+silly tar err x package/lib/middleware/errorHandler.js
+silly tar err x package/lib/middleware/favicon.js
+silly tar err x package/lib/middleware/limit.js
+silly tar err x package/lib/middleware/logger.js
+silly tar err x package/lib/middleware/methodOverride.js
+silly tar err x package/lib/middleware/query.js
+silly tar err x package/lib/middleware/router.js
+silly tar err x package/lib/middleware/session.js
+silly tar err x package/lib/middleware/static.js
+silly tar err x package/lib/middleware/staticCache.js
+silly tar err x package/lib/middleware/vhost.js
+silly tar err x package/lib/middleware/profiler.js
+silly tar err x package/lib/middleware/basicAuth.js
+silly tar err x package/lib/middleware/responseTime.js
+silly tar err x package/lib/middleware/session/cookie.js
+silly tar err x package/lib/middleware/session/memory.js
+silly tar err x package/lib/middleware/session/session.js
+silly tar err x package/lib/middleware/session/store.js
+silly tar err x package/lib/public/directory.html
+silly tar err x package/lib/public/favicon.ico
+silly tar err x package/lib/public/style.css
+verbose installOne cb mongodb@0.9.7
+verbose about to build C:\git\Missive\node_modules\connect-mongodb
+ERR! error installing connect-mongodb@1.1.3 Error: mongodb@0.9.7 install: `bash ./install.sh`
+ERR! error installing connect-mongodb@1.1.3 `cmd "/c" "bash ./install.sh"` failed with 1
+ERR! error installing connect-mongodb@1.1.3     at ChildProcess.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\exec.js:49:20)
+ERR! error installing connect-mongodb@1.1.3     at ChildProcess.emit (events.js:70:17)
+ERR! error installing connect-mongodb@1.1.3     at maybeExit (child_process.js:336:16)
+ERR! error installing connect-mongodb@1.1.3     at Process.onexit (child_process.js:371:5)
+info unbuild C:\git\Missive\node_modules\connect-mongodb
+verbose from cache C:\git\Missive\node_modules\connect-mongodb\package.json
+info preuninstall connect-mongodb@1.1.3
+silly tar err x package/lib/public/error.html
+silly tar err x package/lib/public/icons/page.png
+info uninstall connect-mongodb@1.1.3
+verbose unbuild connect-mongodb@1.1.3 [ true,
+verbose unbuild connect-mongodb@1.1.3   'C:\\git\\Missive\\node_modules',
+verbose unbuild connect-mongodb@1.1.3   'C:\\git\\Missive\\node_modules' ]
+info postuninstall connect-mongodb@1.1.3
+silly tar err x package/lib/public/icons/page_add.png
+silly tar err x package/lib/public/icons/page_attach.png
+silly tar err x package/lib/public/icons/page_code.png
+silly tar err x package/lib/public/icons/page_copy.png
+silly tar err x package/lib/public/icons/page_delete.png
+silly tar err x package/lib/public/icons/page_edit.png
+silly tar err x package/lib/public/icons/page_error.png
+silly tar err x package/lib/public/icons/page_excel.png
+silly tar err x package/lib/public/icons/page_find.png
+silly tar err x package/lib/public/icons/page_gear.png
+ERR! error rolling back connect-mongodb@1.1.3 Error: UNKNOWN, The operation completed successfully.
+ERR! error rolling back connect-mongodb@1.1.3  'C:\git\Missive\node_modules\connect-mongodb\node_modules\___connect.npm\package\lib\public\icons'
+verbose installOne cb connect-mongodb@1.1.3
+ERR! mongodb@0.9.7 install: `bash ./install.sh`
+ERR! `cmd "/c" "bash ./install.sh"` failed with 1
 ERR! 
-ERR! Failed at the bcrypt@0.5.0 install script.
-ERR! This is most likely a problem with the bcrypt package,
+ERR! Failed at the mongodb@0.9.7 install script.
+ERR! This is most likely a problem with the mongodb package,
 ERR! not with npm itself.
 ERR! Tell the author that this fails on your system:
-ERR!     make build
+ERR!     bash ./install.sh
 ERR! You can get their info via:
-ERR!     npm owner ls bcrypt
+ERR!     npm owner ls mongodb
 ERR! There is likely additional logging output above.
 ERR! 
-ERR! System Windows_NT 6.1.7601
-ERR! command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "bcrypt"
-ERR! cwd D:\git\Missive
-ERR! node -v v0.6.7
-ERR! npm -v 1.1.0-beta-10
+ERR! System Windows_NT 6.1.7600
+ERR! command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+ERR! cwd C:\git\Missive
+ERR! node -v v0.5.10
+ERR! npm -v 1.0.103
 ERR! code ELIFECYCLE
-ERR! message bcrypt@0.5.0 install: `make build`
-ERR! message `cmd "/c" "make build"` failed with 1
 verbose exit [ 1, true ]

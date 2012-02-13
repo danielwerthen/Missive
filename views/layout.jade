@@ -20,12 +20,28 @@ html(lang="en")
 						ul.nav
 							li#a-
 								a(href='/') Home
-							li#a-read
-								a(href='/read') Read
+							li#a-networks
+								a(href='/networks') Networks
 							li#a-review
 								a(href='/review') Review
 							li#a-write
 								a(href='/write') Write
+						ul.nav.nav-sidebar
+							li
+								.btn-group
+									a.btn.btn-primary(href= '#') The New Yorker
+									a.btn.btn-primary.dropdown-toggle(data-toggle='dropdown', href='#')
+										span.caret
+									ul.dropdown-menu
+										li
+											a(href= '#') The New Yorker
+										li
+											a(href= '#') The Economist
+										li
+											a(href= '#') The Atlantic
+										li.divider
+										li
+											a(href= '/networks/new') Start a new network
 							if user
 								li#a-signout
 									a(href='/signout') Sign Out
