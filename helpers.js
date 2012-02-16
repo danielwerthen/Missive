@@ -45,6 +45,8 @@ exports.register = function (app, db) {
 	function user(req, res) {
 		return req.session.user;
 	}
+	exports.currentNetwork = currentNetwork;
+	exports.networks = networks;
 	app.dynamicHelpers({
 		networks: networks
 		, currentNetwork: currentNetwork

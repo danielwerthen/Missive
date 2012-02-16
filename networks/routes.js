@@ -1,3 +1,6 @@
+var helpers = require('../helpers')
+	, data = require('./data');
+
 function createNetwork(name, creator) {
 	var network = { name: name
 		, createBy: creator._id
@@ -10,28 +13,41 @@ function createNetwork(name, creator) {
 	return network;
 }
 
+function getMembers(network, users) {
+	
+}
+
 
 exports.register = function (app, db) {
 	app.get('/networks', function (req, res) {
-		res.render('networks/index');
+		var cn = helpers.currentNetwork(req, res);
+		if (cn === null) return res.redirect('/networks/new');
+		data.getUsers(cn, db, function (err, users) {
+			if (err) return res.render('error');
+			res.render('networks/index', { users: users });
+		});
+	});
+
+	app.post('/networks/invite', function (req, res) {
+		var cn = helpers.currentNetwork(req, res);
+		data.invite(cn, req.body.email, db, function (err) {
+			if (err) return res.render('error');
+			res.redirect('/networks/#users');
+		});
 	});
 
 	// New network
 	app.get('/networks/new', function (req, res) {
-		console.log('wtht');
 		res.render('networks/new');
 	});
 
 	app.post('/networks/new', function (req, res) {
 		var network = createNetwork(req.body.name, req.session.user);
-		db.collection('networks', function (err, col) {
-			if (err) return res.render('error', err);
-			col.insert(network, function (err, col) {
-				if (err) return res.render('error', err);
-				res.redirect('/networks');
-			});
+		data.addNetwork(network, req.session.user._id, db, function (err, network) {
+			if (err) return res.render('error');
+			req.session.currentNetworkId = network._id;
+			res.redirect('/networks');
 		});
-
 	});
 
 	app.get('/networks/byId/:id', function (req, res) {

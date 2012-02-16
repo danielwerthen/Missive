@@ -1,0 +1,8 @@
+.users
+	- each u in users
+		p= u.email + (u.invited ? ' invitation sent' : '')
+.invite
+	form.well.form-inline(action='/networks/invite', method='post')
+		label.control-label(for='email') Invite
+		input.input-large(type='text', name='email', placeholder='email')
+		button.btn(type='submit') Send

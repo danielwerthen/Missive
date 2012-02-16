@@ -1,13 +1,21 @@
 header.jumbotron.subhead
-	h1 Networks
+	h1= currentNetwork.name
 	p.lead Collaborate with your network to produce awesome publications!
 	.subnav
 		ul.nav.nav-pills
 			li.active
-				a(href='#') Users
+				a(href='#members') Members
 			li
-				a(href='#') Readers
+				a(href='#readers') Readers
 			li
-				a(href='#') Publications
+				a(href='#publications') Publications
 			li
-				a(href='#') Stats
+				a(href='#stats') Stats
+	.container.block#members
+		!= partial('networks/_users')
+	.container.block#readers
+		!= partial('networks/_readers')
+	.container.block#publications
+		!= partial('networks/_publications')
+	.container.block#stats
+		!= partial('networks/_stats')
