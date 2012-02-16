@@ -2,6 +2,16 @@ var barrier = require('../lib/barrier')
 	, mail = require('../mailgun')
 	, BSON = require('mongodb').BSONPure;
 
+exports.getNetwork = function (networkId, db, callback) {
+	db.collection('networks', function (err, col) {
+		if (err) return callback(err);
+		col.findOne({ _id: BSON.objectID(networkId) }, function (err, network) {
+			if (err) return callback(err);
+			callback(null, network);
+		});
+	});
+};
+
 exports.getUsers = function (network, db, callback) {
 	db.collection('users', function (err, col) {
 		if (err) return callback(err);
@@ -52,8 +62,17 @@ exports.invite = function (network, email, db, callback) {
 		};
 		col.update({ _id: network._id }, update, false, function (err, data) {
 			if (err) return callback(err);
-			var body = 'Hi\n\nYou have been invited to join ' + network.name + ' at missive.se. To do so you just need to follow this <a href=\"http://localhost:3000/networks/acceptinvitation/' + network._id + '/' + email + '\">link</a>.';
-			mail.sendMail('robot@missive.mailgun.org', email, network.name, body);
+			mail.gun.sendRaw('robot@missive.mailgun.org', email,
+				'From: robot@missive.mailgun.org' + 
+				'\nTo: ' + email + 
+				'\nContent-Type: text/html; charset=utf-8' +
+				'\nSubject: ' + network.name +
+				'\n\nHi!' +
+				'\n\nYou have been invited to join ' + network.name + ' at missive.se.' +
+				'\nTo accept please use this <a href=\"http://localhost:3000/networks/acceptinvitation/' + network._id + '/' + email + '\">link</a>.',
+				function (err) {
+					if (err) console.log(err); 
+				});
 			callback(null);
 		});
 	});

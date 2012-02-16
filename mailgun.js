@@ -4,3 +4,5 @@ var Mailgun = require('mailgun').Mailgun
 exports.sendMail = function (from, to, subject, body) {
 	mg.sendText(from, [to], subject, body);
 };
+
+exports.gun = mg;

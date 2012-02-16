@@ -1,5 +1,6 @@
 var helpers = require('../helpers')
-	, data = require('./data');
+	, data = require('./data')
+	, sign = require('../lib/sign')
 
 function createNetwork(name, creator) {
 	var network = { name: name
@@ -33,6 +34,20 @@ exports.register = function (app, db) {
 		data.invite(cn, req.body.email, db, function (err) {
 			if (err) return res.render('error');
 			res.redirect('/networks/#users');
+		});
+	});
+
+	var acceptInvitation = '/networks/acceptinvitation/:networkId/:userEmail/';
+	sign.allow(acceptInvitation);
+	app.get(acceptInvitation, function (req, res) {
+		data.getNetwork(req.params.networkId, function (err, network) {
+			if (err || !network) return res.redirect('home');
+			var foundEmail = false;
+			for (var i in network.users) {
+				if (network.users[i].email === req.params.userEmail)
+					foundEmail = true;
+			}
+			if (!foundEmail) return res.redirect('home');
 		});
 	});
 
