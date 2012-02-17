@@ -8,7 +8,13 @@ require(
 			if (a.length > 0) {
 				a.addClass('active');
 			}
+			$('.control-group.error input').change(function () {
+				$(this).closest('.control-group.error').removeClass('error');
+				$(this).off('change');
+			});
 
 		});
+
+
 	}
 );

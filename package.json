@@ -5,6 +5,8 @@
 		"express": "2.5.8",
 		"jade": "0.20.1",
 		"mongodb": "0.9.8-7",
-		"mailgun": "0.4.2"
+		"mailgun": "0.4.2",
+		"mongoose": "2.5.x",
+		"mongoose": "1.0.x"
 	}
 }

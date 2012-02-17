@@ -1,5 +1,5 @@
 - var validation = validation || {};
-- var user = user || {};
+- var data = data|| {};
 .row
 	.span8
 		form.form-horizontal(action= '/signin', method='post')
@@ -8,7 +8,7 @@
 				.control-group( class= validation.email ) 
 					label.control-label( for= 'email' ) Email
 					.controls
-						input.input-xlarge#email(type= 'text', name='email', value=user.email, tabindex=1)
+						input.input-xlarge#email(type= 'text', name='email', value=data.email, tabindex=1)
 						p.help-block=validation.emailMessage
 				.control-group( class= validation.password ) 
 					label.control-label( for= 'password' ) Password
