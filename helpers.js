@@ -1,17 +1,14 @@
-exports.register = function (app, db) {
+var Network = require('./models/networks')
+	, User = require('./models/user')
+exports.register = function (app) {
 	var data = {};
 	function loadNetworks(userId, callback) {
-		db.collection('networks', function (err, networks) {
-			if (err) return callback(err);
-			var filter = { users: { $elemMatch: { userId: userId } } };
-			networks.find(filter, function (err, curs) {
+		User.findOne({ _id: userId }, ['_id', 'networks'])
+			.populate('networks', ['name', '_id'])
+			.run(function (err, user) {
 				if (err) return callback(err);
-				curs.toArray(function (err, nets) {
-					if (err) return callback(err);
-					callback(null, nets);
-				});
+				callback(null, user.networks);
 			});
-		});
 	}
 	app.use(function (req, res, next) {
 		function handle(err) {

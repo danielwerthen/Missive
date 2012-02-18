@@ -2,7 +2,7 @@ var db = require('./mongoose')
 	, crypto = require('crypto')
 	, User = require('./models/user')
 	, url = require('url')
-	, allowed = []
+	, allowed = [ /^\/$/ ]
 
 function hash(str, salt) {
 	salt = salt || 'f7ecb8924645bfe335941beb068e7';
@@ -94,10 +94,12 @@ exports.authenticate = function (app) {
 		if (req.session.user)
 			next();
 		else {
-			if (allowed.indexOf('parts.pathname'))
-				next();
-			else
-				redirect('home');
+			for (var i in allowed) {
+				if (allowed[i].test(parts.pathname))
+					return next();
+			}
+			console.log('denied');
+			res.redirect('home');
 		}
 	};
 };

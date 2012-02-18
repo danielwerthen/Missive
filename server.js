@@ -4,6 +4,7 @@ var express = require('express')
 	, connection = require('./mongoose')
 	, auth = require('./auth')
 	, User = require('./models/user')
+	, helpers = require('./helpers')
 
 connection.on('open', function (err) {
 	if (err) return console.dir(err);
@@ -26,14 +27,20 @@ var start = function () {
 		, secret: 'secret'
 		, store: sessionStore
 		}));
+		helpers.register(app);
 		app.use(auth.authenticate(app));
 		app.use(app.router);
 		app.set('view engine', 'jade');
 		app.set('views', __dirname + '/views');
+
 	});
 
 	app.get('/', function (req, res) {
 		res.render('index', { user: req.session.user });
+	});
+	([ 'networks' ]).every(function (route) {
+		var routes = require('./' + route + '/routes');
+		routes.register(app);
 	});
 
 

@@ -1,6 +1,6 @@
 var helpers = require('../helpers')
 	, data = require('./data')
-	, sign = require('../lib/sign')
+	, Network = require('../models/networks')
 
 function createNetwork(name, creator) {
 	var network = { name: name
@@ -14,12 +14,32 @@ function createNetwork(name, creator) {
 	return network;
 }
 
-function getMembers(network, users) {
-	
-}
+exports.register = function (app) {
+	app.get('/networks/new', function (req, res) {
+		return res.render('networks/new');
+	});
+
+	app.post('/networks/new', function (req, res) {
+		Network.newNetwork(req.body.name, req.session.user, function (err, network) {
+			if (err) return res.redirect('/networks/new');
+			req.session.currentNetworkId = network._id;
+			return res.redirect('/networks');
+		});
+	});
+
+	app.get('/networks', function (req, res) {
+		Network.findOne({ _id: req.session.currentNetworkId })
+			.populate('users.user')
+			.run(function (err, network) {
+				console.dir(network);
+				if (err) return res.redirect('home');
+				return res.render('networks/index', network);
+			});
+	});
+};
 
 
-exports.register = function (app, db) {
+exports.register1 = function (app, db) {
 	app.get('/networks', function (req, res) {
 		var cn = helpers.currentNetwork(req, res);
 		if (cn === null) return res.redirect('/networks/new');
@@ -38,7 +58,7 @@ exports.register = function (app, db) {
 	});
 
 	var acceptInvitation = '/networks/acceptinvitation/:networkId/:userEmail/';
-	sign.allow(acceptInvitation);
+	//sign.allow(acceptInvitation);
 	app.get(acceptInvitation, function (req, res) {
 		data.getNetwork(req.params.networkId, function (err, network) {
 			if (err || !network) return res.redirect('home');
@@ -57,6 +77,7 @@ exports.register = function (app, db) {
 	});
 
 	app.post('/networks/new', function (req, res) {
+
 		var network = createNetwork(req.body.name, req.session.user);
 		data.addNetwork(network, req.session.user._id, db, function (err, network) {
 			if (err) return res.render('error');
