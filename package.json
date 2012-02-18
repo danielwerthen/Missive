@@ -7,6 +7,6 @@
 		"mongodb": "0.9.8-7",
 		"mailgun": "0.4.2",
 		"mongoose": "2.5.x",
-		"mongoose-type": "1.0.x"
+		"mongoose-types": "1.0.x"
 	}
 }
