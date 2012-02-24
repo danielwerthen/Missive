@@ -1,4 +1,5 @@
 -var networks = networks || [];
+-var invitations = invitations || [];
 !!! 5
 html(lang="en")
 	head
@@ -32,14 +33,19 @@ html(lang="en")
 								li#a-signout
 									a(href='/signout') Sign Out
 								li.divider-vertical
-								if networks.length > 0
+								if networks.length > 0 || invitations.length > 0
 									li.dropdown
-										a.dropdown-toggle(data-toggle='dropdown', href='#')= currentNetwork.name
+										a.dropdown-toggle(data-toggle='dropdown', href='#')= currentNetwork ? currentNetwork.name : 'Join a network'
 											b.caret
 										ul.dropdown-menu
 											each network in networks
 												li
 													a(href= '/networks/byId/' + network._id)= network.name
+											if (networks.length > 0 && invitations.length > 0)
+												li.divider
+											each network in invitations
+												li
+													a(href= '/networks/acceptInvite/' + network._id)= 'Join ' + network.name
 											li.divider
 											li
 												a(href= '/networks/new') Start a new network

@@ -6,7 +6,7 @@ function required(val) {
 	return true;
 }
 
-var validEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+var validEmail = /^([A-Za-z0-9_\-\.])([A-Za-z0-9_\-\.\+])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
 function match(reg) {
 	return function (val) {
 		return reg.test(val);

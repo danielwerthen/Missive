@@ -29,12 +29,34 @@ exports.register = function (app) {
 
 	app.get('/networks', function (req, res) {
 		Network.findOne({ _id: req.session.currentNetworkId })
-			.populate('users.user')
+			.populate('users.user', ['email', 'name'])
 			.run(function (err, network) {
-				console.dir(network);
 				if (err) return res.redirect('home');
-				return res.render('networks/index', network);
+				if (network)
+					return res.render('networks/index', { network: network });
+				return res.redirect('/networks/new');
 			});
+	});
+
+
+	app.get('/networks/acceptInvite/:id', function (req, res) {
+		Network.join(req.params.id, req.session.user, function (err) {
+			if (err) return res.render('error');
+			return res.redirect('/networks');
+		});
+	});
+
+	app.post('/networks/invite', function (req, res) {
+		var cn = helpers.currentNetwork(req, res);
+		Network.findOne({ _id: cn._id })
+		.run(function (err, network) {
+			if (err) return res.render('error');
+			network.addUser(req.body.email)
+			.save(function (err) {
+				if (err) return res.render('error');
+				return res.redirect('/networks/#members');
+			});
+		});
 	});
 };
 
