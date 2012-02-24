@@ -38,7 +38,8 @@ var start = function () {
 	app.get('/', function (req, res) {
 		res.render('index', { user: req.session.user });
 	});
-	([ 'networks' ]).every(function (route) {
+	([ 'networks' 
+	 , 'write' ]).forEach(function (route) {
 		var routes = require('./' + route + '/routes');
 		routes.register(app);
 	});
