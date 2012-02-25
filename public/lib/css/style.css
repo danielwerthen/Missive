@@ -5,3 +5,8 @@
 .in.collapse .nav.nav-sidebar {
 	float: left !important;
 }
+
+textarea.article {
+	width: 100%;
+	height: 100%;
+}
