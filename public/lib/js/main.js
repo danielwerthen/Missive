@@ -17,15 +17,19 @@ require(
 			$('.autofit')
 				.change(autofit)
 				.keydown(autofit)
-				.keyup(autofit);
-			autofit();
+				.keyup(autofit)
+				.each(function (elem) {
+					autofit.apply(elem, null);
+				});
+			
 
 		});
 
 		function autofit() {
 			var text = $(this).val().replace(/\n/g, '<br/>');
 			var copy = $(this).siblings('.autofit-copy');
-			copy.html(text);
+			if (copy.length > 0)
+				copy.html(text);
 		}
 
 

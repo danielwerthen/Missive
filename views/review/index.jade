@@ -1,0 +1,24 @@
+- var articles = articles || [];
+- var article = article || {};
+- var lastWeek = (new Date()).setDate((new Date()).getDate() - 7)
+
+header.jumbotron.subhead
+	h1= currentNetwork.name
+	p.lead Write every and any thing, write til your heart's content
+.row-fluid
+	.span3
+		if articles.length > 0
+			ul.nav.nav-list.well
+				li.nav-header This Week
+				each a in articles
+					if a.updatedAt < lastWeek
+						li.nav-header Older
+					li(class= a._id === article._id ? 'active' : '')
+						a(href='/review/' + a._id)= a.title
+				if articles.length >= 20
+					li.nav-header Older
+					li
+						a(href='/review/archive') Archive
+	.span8
+		h1= article.title
+		p= article.body
