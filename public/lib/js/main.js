@@ -13,7 +13,20 @@ require(
 				$(this).off('change');
 			});
 
+			//Attach autofit
+			$('.autofit')
+				.change(autofit)
+				.keydown(autofit)
+				.keyup(autofit);
+			autofit();
+
 		});
+
+		function autofit() {
+			var text = $(this).val().replace(/\n/g, '<br/>');
+			var copy = $(this).siblings('.autofit-copy');
+			copy.html(text);
+		}
 
 
 	}

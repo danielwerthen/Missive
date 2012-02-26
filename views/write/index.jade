@@ -2,7 +2,10 @@ header.jumbotron.subhead
 	h1= currentNetwork.name
 	p.lead Write every and any thing, write til your heart's content
 .row-fluid
-	.span6
-		textarea.article
-	.span6
-		p Markdown
+	.span8
+		form.well
+			.controls
+				input.input-xlarge#title(type= 'text', name='title', tabindex=1, placeholder='Title')
+			.controls.relative
+				textarea.autofit(tabindex=2, name='body')
+				div.autofit-copy
