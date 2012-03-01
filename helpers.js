@@ -1,6 +1,7 @@
 var Network = require('./models/networks')
 	, User = require('./models/user')
 	, barrier = require('./lib/barrier')
+	, markdown = require('markdown').markdown
 
 exports.register = function (app) {
 	var data = {};
@@ -81,5 +82,8 @@ exports.register = function (app) {
 		, currentNetwork: currentNetwork
 		, user: user
 		, invitations: invitations
+	});
+	app.helpers({
+		markdown: markdown
 	});
 };

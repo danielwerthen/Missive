@@ -21,4 +21,5 @@ header.jumbotron.subhead
 						a(href='/review/archive') Archive
 	.span8
 		h1= article.title
-		p= article.body
+		if article.body !== undefined
+			p!= markdown.toHTML(article.body)

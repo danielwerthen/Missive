@@ -58,6 +58,11 @@ exports.register = function (app) {
 			});
 		});
 	});
+
+	app.get('/networks/byId/:id', function (req, res) {
+		req.session.currentNetworkId = req.params.id;
+		res.redirect('back');
+	});
 };
 
 
