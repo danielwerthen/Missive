@@ -1,4 +1,5 @@
 var express = require('express')
+	, fs = require('fs')
 	, app = express.createServer()
 	, mongoStore = require('./connect-mongodb')
 	, connection = require('./mongoose')
@@ -33,6 +34,14 @@ var start = function () {
 		app.set('view engine', 'jade');
 		app.set('views', __dirname + '/views');
 
+	});
+	
+	app.get('/markdown.js', function (req, res) {
+		fs.readFile(__dirname + '/node_modules/markdown/lib/markdown.js', function (err, data) {
+			if (err) return res.render('error');
+			res.writeHead(200, {'Content-Type': 'text/javascript' });
+			res.end(data);
+		});
 	});
 
 	app.get('/', function (req, res) {

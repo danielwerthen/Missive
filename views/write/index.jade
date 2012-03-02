@@ -2,13 +2,15 @@ header.jumbotron.subhead
 	h1= currentNetwork.name
 	p.lead Write every and any thing, write til your heart's content
 .row-fluid
-	.span8
-		form.well(method='post', action='/write/save')
+	.span6
+		form.well(method='post', action='/write/save', id='article-form')
 			.controls
 				input.input-xlarge#title(type= 'text', name='title', tabindex=1, placeholder='Make the title good, would you?')
 			.controls.relative
-				textarea.autofit(tabindex=2, name='body', placeholder='Enter your text here, you may use markdown if you would like to')
+				textarea.autofit.accept-tab(tabindex=2, name='body', placeholder='Enter your text here, you may use markdown if you would like to')
 				div.autofit-copy
 			.form-actions
 				button.btn.btn-primary(type= 'submit', tabindex=3) Save
 				button.btn(type= 'button', tabindex=4) Cancel
+	.span6
+		.markdown(data-for='article-form')

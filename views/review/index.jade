@@ -22,7 +22,7 @@ header.jumbotron.subhead
 	.span6
 		h1= article.title
 		if article.body !== undefined
-			p!= markdown.toHTML(article.body)
+			div!= markdown.toHTML(article.body)
 	if article && article.comments
 		.span3
 			.well
