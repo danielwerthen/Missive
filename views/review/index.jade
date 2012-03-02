@@ -19,7 +19,19 @@ header.jumbotron.subhead
 					li.nav-header Older
 					li
 						a(href='/review/archive') Archive
-	.span8
+	.span6
 		h1= article.title
 		if article.body !== undefined
 			p!= markdown.toHTML(article.body)
+	if article && article.comments
+		.span3
+			.well
+				h3 Comments
+				each c in article.comments
+					p= c.body
+				form(method='post', action='/review/' + article._id + '/addComment')
+					.controls.relative
+						textarea.autofit(tabindex=1, name='body', placeholder='Enter a comment here')
+						div.autofit-copy
+					.form-actions
+						button.btn.btn-primary(type= 'submit', tabindex=2) Save
