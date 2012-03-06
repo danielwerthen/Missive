@@ -1,0 +1,48 @@
+body {
+	background: #908e90;
+}
+
+h1, h2, h3, div, p {
+	font-family: 'Poiret One';
+	line-height: 1.55;
+	text-align: center;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 60px;
+}
+
+div {
+	font-weight: 500;
+	font-size: 48px;
+}
+
+.slide {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.pic01 {
+	background-image: url("pic01.png");
+	background-repeat: no-repeat;
+}
+
+.step {
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	-ms-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+}
+
+.step:not(.active) {
+	opacity: 0.3;
+}
+
+.step.active {
+	opacity: 1;
+}
