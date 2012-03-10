@@ -51,38 +51,26 @@ function findChanges(table, c, r) {
 		, from = ''
 		, to = ''
 		, change = false
-		, lastSpace = 0
-		, changes = [];
+		, changes = []
 	
 	while (i > 0 && j > 0) {
-		if (c[i] === ' ') {
-			if (!change) {
-				from = '';
-				to = '';
-			}
-		}
 		if (c[i] === r[j]) {
 			if (change) {
-				if (c[i] === ' ') {
-					change.from = from;
-					change.to = to;
-					change.index = i;
-					changes.push(change);
-					from = '';
-					to = '';
-					change = false;
-				}
-			}
-			if (change || c[i] !== ' ') {
-				from = c[i] + from;
-				to = r[j] + to;
+				change.start = i;
+				change.from = from;
+				change.to = to;
+				changes.push(change);
+				change = false;
+				from = '';
+				to = '';
 			}
 			i = i - 1;
 			j = j - 1;
 		}
 		else {
-			if (!change)
-				change = { stop: lastSpace } ;
+			if (!change) {
+				change = { start: 0, stop: i };
+			}
 			if (table[i][j-1] > table[i-1][j]) {
 				to = r[j] + to;
 				j = j-1;
@@ -92,19 +80,41 @@ function findChanges(table, c, r) {
 				i = i - 1;
 			}
 		}
-		if (c[i] === ' ') {
-			lastSpace = i;
-		}
 	}
+	changes.reverse();
 	return changes;
+}
+
+function applyChanges(changes, c) {
+	var v2 = ''
+		, li = 0
+	for (var i in changes) {
+		var change = changes[i];
+		var t = c.substring(li, change.start + 1);
+		v2 = v2 + t + change.to;
+		li = change.stop + 1;
+	}
+	v2 = v2 + c.substring(li);
+	return v2;
+}
+function match(a,b) {
+	if (a.length !== b.length) return false;
+	for (var i = 0; i < a.length; i++) {
+		if (a[i] !== b[i]) return false;
+	}
+	return true;
 }
 
 console.log('S1: ' + S1);
 console.log('S2: ' + S2);
 var table = makeTable(S1, S2);
-var test1 = backtrack(table, S1, S2, S1.length - 1, S2.length - 1);
-console.log('LCS: ' + test1);
+//var test1 = backtrack(table, S1, S2, S1.length - 1, S2.length - 1);
+//console.log('LCS: ' + test1);
 var test2 = findChanges(table, S1, S2);
 console.dir(test2);
+var test3 = applyChanges(test2, S1);
+
+console.log('Applied: ' + test3);
+console.log('Identical: ' + match(test3,S2));
 //var test1 = LCS(S1, S2);
 //console.log(test1);
