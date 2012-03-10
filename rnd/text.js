@@ -1,7 +1,3 @@
-var S1 = '0Hello Kitty, now lets see what that cat can do as far as speed goes'
-	, S2 = '0Hello sdkDummy, I think that this will be a change, lets see what this puppy can do as after as optimum goes'
-	, S3 = 'AGCAT'
-	, S4 = 'GAC'
 
 function makeTable(c, r) {
 	var table = [];
@@ -87,7 +83,8 @@ function findChanges(table, c, r) {
 
 function applyChanges(changes, c) {
 	var v2 = ''
-		, li = 0
+		, li = 1
+		, c = '0' + c
 	for (var i in changes) {
 		var change = changes[i];
 		var t = c.substring(li, change.start + 1);
@@ -105,16 +102,29 @@ function match(a,b) {
 	return true;
 }
 
+function compare(c, r) {
+	c = '0' + c;
+	r = '0' + r;
+	var table = makeTable(c,r);
+	return findChanges(table, c, r);
+}
+
+var S1 = 'I think this be wrong!'
+	, S2 = 'I think this is wrong!'
+	, S3 = 'I think that be wrong because of many external factors'
+
 console.log('S1: ' + S1);
 console.log('S2: ' + S2);
-var table = makeTable(S1, S2);
-//var test1 = backtrack(table, S1, S2, S1.length - 1, S2.length - 1);
-//console.log('LCS: ' + test1);
-var test2 = findChanges(table, S1, S2);
-console.dir(test2);
-var test3 = applyChanges(test2, S1);
+console.log('S3: ' + S3);
 
-console.log('Applied: ' + test3);
-console.log('Identical: ' + match(test3,S2));
-//var test1 = LCS(S1, S2);
-//console.log(test1);
+var c1 = compare(S1, S2);
+var c2 = compare(S1, S3);
+console.dir(c1);
+var r2 = applyChanges(c1, S1);
+var r3 = applyChanges(c2, S1);
+console.log('r2: ' + r2);
+console.log('r3: ' + r3);
+
+console.log('Test1: ' + match(S2, r2));
+console.log('Test2: ' + match(S3, r3));
+
