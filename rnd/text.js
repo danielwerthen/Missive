@@ -1,3 +1,4 @@
+var _ = require('underscore');
 
 function makeTable(c, r) {
 	var table = [];
@@ -109,9 +110,41 @@ function compare(c, r) {
 	return findChanges(table, c, r);
 }
 
+function transform(c1, c2) {
+	var tc = [];
+	_.each(c2, function (change) {
+		var ts = _.filter(c1, function (el) {
+			return el.start <= change.start;
+		});
+		if (ts && ts.length > 0) {
+			var push = _.reduce(ts, function (memo, el) {
+				return memo + (el.start + el.to.length - el.stop);
+			}, 0);
+			tc.push({ start: change.start + push, stop: change.stop + push, from: change.from, to: change.to }); 
+		}
+		else
+			tc.push(change);
+	});
+	return tc;
+}
+
+function findConflicts(c1, c2) {
+	var result = [];
+	_.each(c2, function (change) {
+		var conflicts = _.filter(c1, function (el) {
+			return (el.start >= change.start && el.start <= change.stop)
+			 || (el.stop <= change.stop && el.stop >= change.start)
+		});
+		if (conflicts && conflicts.length > 0)
+			result.push({ change: change, conflicts: conflicts });
+	});
+	return result;
+}
+
 var S1 = 'I think this be wrong!'
-	, S2 = 'I think this is wrong!'
-	, S3 = 'I think that be wrong because of many external factors'
+	, S2 = 'I Wow think this is wrong!'
+	, S3 = 'I think that are wrong because of many external factors'
+	, S4 = 'I Wow think that are wrong because of many external factors'
 
 console.log('S1: ' + S1);
 console.log('S2: ' + S2);
@@ -119,12 +152,16 @@ console.log('S3: ' + S3);
 
 var c1 = compare(S1, S2);
 var c2 = compare(S1, S3);
-console.dir(c1);
+console.dir(c2);
 var r2 = applyChanges(c1, S1);
 var r3 = applyChanges(c2, S1);
-console.log('r2: ' + r2);
-console.log('r3: ' + r3);
+var tc2 = transform(c1, c2);
+var confs = findConflicts(c1, c2);
+console.log('Conflicts: ' + confs.length);
+console.dir(confs[0]);
+var tr3 = applyChanges(tc2, S2);
 
 console.log('Test1: ' + match(S2, r2));
 console.log('Test2: ' + match(S3, r3));
+console.log('Test3: ' + match(S4, tr3));
 
