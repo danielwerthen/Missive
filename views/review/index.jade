@@ -1,7 +1,5 @@
 - var articles = articles || [];
 - var article = article || {};
-- var lastWeek = (new Date()).setDate((new Date()).getDate() - 7)
-- var once = false;
 
 header.jumbotron.subhead
 	h1= currentNetwork.name
@@ -12,9 +10,6 @@ header.jumbotron.subhead
 			ul.nav.nav-list.well
 				li.nav-header This Week
 				each a in articles
-					if a.updatedAt < lastWeek && !once
-						- once = true
-						li.nav-header Older
 					li(class= a._id === article._id ? 'active' : '')
 						a(href='/review/' + a._id)= a.title
 				if articles.length >= 20
@@ -23,8 +18,8 @@ header.jumbotron.subhead
 						a(href='/review/archive') Archive
 	.span6
 		h1= article.title
-		if article.body !== undefined
-			div!= markdown.toHTML(article.body)
+		if article !== undefined
+			div!= markdown.toHTML(article.body())
 	if article && article.comments
 		.span3
 			.well

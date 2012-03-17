@@ -33,11 +33,11 @@ articleSchema.methods.addComment = function addComment(body, user) {
 
 articleSchema.methods.body = function body(set, version) {
 	if (!set) {
-		return _.chain(this.revisions)
+		var last = _.chain(this.revisions)
 			.sortBy(function (rev) { return -rev.version; })
 			.first()
-			.value()
-			.body;
+			.value();
+		return last ? last.body : '';
 	}
 	else {
 		version = version || 0;
@@ -70,12 +70,13 @@ articleSchema.methods.findConflicts = function findConflicts(body, version) {
 		.filter(function (rev) { return rev.version >= version; })
 		.sortBy(function (rev) { return rev.version; })
 		.value()
-		, body = set
-		, version = 0
+		, version = version || 0
 		, first = revs[0]
-		, last = revs[revs.count - 1]
-		, rc = vc.compare(first.body, last.body)
-		, tc = vc.compare(first.body, set)
+		, last = revs[revs.length - 1]
+		, rc = []
+		, tc = []
+	rc = vc.compare(first.body, last.body);
+	tc = vc.compare(first.body, body);
 
 	//tc = vc.transform(rc, tc));
 	return vc.findConflicts(rc, tc);
