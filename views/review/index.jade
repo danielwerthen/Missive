@@ -3,32 +3,38 @@
 
 header.jumbotron.subhead
 	h1= currentNetwork.name
-	p.lead Write every and any thing, write til your heart's content
 .row-fluid
-	.span3
-		if articles.length > 0
-			ul.nav.nav-list.well
-				li.nav-header This Week
-				each a in articles
-					li(class= a._id === article._id ? 'active' : '')
-						a(href='/review/' + a._id)= a.title
-				if articles.length >= 20
-					li.nav-header Older
-					li
-						a(href='/review/archive') Archive
-	.span6
-		h1= article.title
-		if article !== undefined
-			div!= markdown.toHTML(article.body())
-	if article && article.comments
+	.span6.well
+		h2 Articles
+		hr
+		each a in articles
+			.article-item
+				h4= a.title
+	//
 		.span3
-			.well
-				h3 Comments
-				each c in article.comments
-					p= c.body
-				form(method='post', action='/review/' + article._id + '/addComment')
-					.controls.relative
-						textarea.autofit(tabindex=1, name='body', placeholder='Enter a comment here')
-						div.autofit-copy
-					.form-actions
-						button.btn.btn-primary(type= 'submit', tabindex=2) Save
+			if articles.length > 0
+				ul.nav.nav-list.well
+					li.nav-header This Week
+					each a in articles
+						li(class= a._id === article._id ? 'active' : '')
+							a(href='/review/' + a._id)= a.title
+					if articles.length >= 20
+						li.nav-header Older
+						li
+							a(href='/review/archive') Archive
+		.span6
+			h1= article.title
+			if article !== undefined
+				div!= markdown.toHTML(article.body())
+		if article && article.comments
+			.span3
+				.well
+					h3 Comments
+					each c in article.comments
+						p= c.body
+					form(method='post', action='/review/' + article._id + '/addComment')
+						.controls.relative
+							textarea.autofit(tabindex=1, name='body', placeholder='Enter a comment here')
+							div.autofit-copy
+						.form-actions
+							button.btn.btn-primary(type= 'submit', tabindex=2) Save

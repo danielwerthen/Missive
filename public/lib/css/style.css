@@ -34,3 +34,7 @@ div.autofit-copy {
 	min-height: 5em;
 	width: 100%;
 }
+
+div.article-item {
+	min-height: 3rem;
+}
