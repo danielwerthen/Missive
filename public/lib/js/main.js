@@ -14,6 +14,10 @@ require(
 				$(this).off('change');
 			});
 
+			$('.async-load').click(function () {
+				$($(this).data('for')).load($(this).data('url'));
+			});
+
 			//Attach autofit
 			$('.autofit')
 				.change(autofit)

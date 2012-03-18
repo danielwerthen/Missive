@@ -35,6 +35,33 @@ div.autofit-copy {
 	width: 100%;
 }
 
-div.article-item {
-	min-height: 3rem;
+.article-listing {
+	min-height: 2rem;
+	padding: 10px;
+}
+
+.article-listing a {
+	color: #333;
+}
+
+.article-listing a h4 {
+	cursor: pointer;
+}
+
+.article-listing:nth-child(odd) {
+	background-color: whiteSmoke;
+}
+
+.article-listing:nth-child(even) {
+	background-color: #ddd;
+}
+
+.article-listing:hover {
+	background-color: #bbb;
+	font-weight: 800;
+}
+
+.hash-top {
+	position: absolute;
+	top: 0px;
 }

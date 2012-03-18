@@ -5,6 +5,16 @@ var helpers = require('../helpers')
 
 
 exports.register = function (app) {
+	app.get('/review/glance/:id', function (req, res) {
+		Article.find()
+			.where('network', req.session.currentNetworkId)
+			.where('_id', req.params.id)
+			.run(function (err, arts) {
+				if (err) return res.render('error');
+				if (arts.length == 0) return res.end(null);
+				return res.partial('articles/_glance', { article: arts[0] });
+			});
+	});
 	app.get('/review/:id?', function (req, res) {
 		if (!req.session.currentNetworkId) return res.redirect('/networks/new');
 		Article.find()
