@@ -14,6 +14,14 @@ require(
 				$(this).off('change');
 			});
 
+			var selectables = $('.selectable');
+			if (selectables.length > 0) {
+				selectables.click(function () {
+					selectables.removeClass('selected');
+					$(this).addClass('selected');
+				});
+			}
+
 			$('.async-load').click(function () {
 				$($(this).data('for')).load($(this).data('url'));
 			});

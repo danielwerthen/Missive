@@ -4,6 +4,30 @@ var helpers = require('../helpers')
 
 
 exports.register = function (app) {
+	app.get('/write/revise/:id', function (req, res) {
+		if (!req.session.currentNetworkId) return res.redirect('/networks/new');
+		Article.findOne({ _id: req.params.id }, function (err, article) {
+			if (err) return res.render('error');
+			return res.render('write/index', { article: article });
+		});
+	});
+
+	app.post('/write/revise/:id', function (req, res) {
+		Article.findOne({ _id: req.params.id }, function (err, article) {
+			if (err || !article) return res.render('error');
+			console.log(req.body.version);
+			var article = article.addSuggestion(req.body.body, req.body.version, req.session.user._id);
+			if (!article) return res.render('error');
+			article.validate(function (err) {
+				if (err) return res.render('error');
+				article.save(function (err) {
+					if (err) return res.render('error');
+					res.redirect('/review/');
+				});
+			});
+		});
+	});
+
 	app.get('/write', function (req, res) {
 		if (!req.session.currentNetworkId) return res.redirect('/networks/new');
 		return res.render('write/index');

@@ -31,6 +31,10 @@ articleSchema.methods.addComment = function addComment(body, user) {
 	return this;
 };
 
+articleSchema.methods.version = function () {
+	return _.max(this.revisions, function (r) { return r.version; }).version;
+};
+
 articleSchema.methods.body = function body(set, version) {
 	if (!set) {
 		var last = _.chain(this.revisions)
@@ -82,10 +86,10 @@ articleSchema.methods.findConflicts = function findConflicts(body, version) {
 	return vc.findConflicts(rc, tc);
 };
 
-articleSchema.methods.addSuggestion = function addSuggestion(body, version, user) {
+articleSchema.methods.addSuggestion = function addSuggestion(body, version, userId) {
 	var rev = _.find(this.revisions, function (r) { return r.version == version; });
 	if (rev) {
-		this.suggestions.push({ body: body, version: version, user: user._id });
+		this.suggestions.push({ body: body, version: version, user: userId });
 		return this;
 	}
 	else return null;

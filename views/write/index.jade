@@ -1,13 +1,16 @@
+- var article = article || {};
 header.jumbotron.subhead
 	h1= currentNetwork.name
-	p.lead Write every and any thing, write til your heart's content
+	p.lead Write something good, why don't you.
 .row-fluid
 	.span6
-		form.well(method='post', action='/write/save', id='article-form')
+		form.well(method='post', action=( article._id ? '/write/revise/' + article._id : '/write/save' ), id='article-form')
 			.controls
-				input.input-xlarge#title(type= 'text', name='title', tabindex=1, placeholder='Make the title good, would you?')
+				if article.version
+					input(type='hidden', name='version', value=article.version())
+				input.input-xlarge#title(type= 'text', name='title', tabindex=1, placeholder='Make the title good, would you?', value=article.title, disabled=(article.title ? 'disabled' : ''))
 			.controls.relative
-				textarea.autofit.accept-tab(tabindex=2, name='body', placeholder='Enter your text here, you may use markdown if you would like to')
+				textarea.autofit.accept-tab(tabindex=2, name='body', placeholder='Enter your text here, you may use markdown if you would like to')= (article.body ? article.body() : '')
 				div.autofit-copy
 			.form-actions
 				button.btn.btn-primary(type= 'submit', tabindex=3) Save

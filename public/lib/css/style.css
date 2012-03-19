@@ -44,24 +44,34 @@ div.autofit-copy {
 	color: #333;
 }
 
-.article-listing a h4 {
-	cursor: pointer;
-}
-
-.article-listing:nth-child(odd) {
-	background-color: whiteSmoke;
-}
-
-.article-listing:nth-child(even) {
+.selectable:nth-child(odd) {
 	background-color: #ddd;
 }
 
-.article-listing:hover {
-	background-color: #bbb;
-	font-weight: 800;
+.selectable:nth-child(even) {
+	background-color: whiteSmoke;
 }
 
-.hash-top {
-	position: absolute;
-	top: 0px;
+.selectable:hover {
+	background-color: #bbb;
+}
+
+.selectable {
+	cursor: pointer;
+}
+
+.selectable.selected {
+	background-color: #bbb;
+}
+
+a.btn i,p {
+	display: inline-block;
+}
+
+.right {
+	float: right;
+}
+
+.comment {
+	display: block;
 }

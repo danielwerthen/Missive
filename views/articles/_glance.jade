@@ -1,3 +1,23 @@
-#top.hash-top
+.right.btn-toolbar
+	.btn-group
+		a.btn.btn-large(href='/write/revise/' + article._id)
+			i.icon-pencil.icon-black
+		a.btn.btn-large(href='/review/suggestions/' + article._id)
+			i.icon-list-alt.icon-black
+			= ' ' + article.suggestions.length
+		a.btn.btn-large(href='#comments')
+			i.icon-comment.icon-black
+			= ' ' + article.comments.length
 h1= article.title
 div!= markdown.toHTML(article.body())
+hr
+#comments.well
+	h2 Comments
+	each c in article.comments
+		p.comment= c.body
+	form(method='post', action='/review/' + article._id + '/addComment', id='comment-form')
+		.controls.relative
+			textarea.autofit(tabindex=1, name='body', placeholder='Enter a comment here')
+			div.autofit-copy
+		.form-actions
+			button.btn.btn-primary(type='submit', tabindex=2) Save
