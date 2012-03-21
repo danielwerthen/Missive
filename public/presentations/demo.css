@@ -29,6 +29,8 @@ div {
 .pic01 {
 	background-image: url("pic01.png");
 	background-repeat: no-repeat;
+	background-position: center;
+	height: 900px;
 }
 
 .step {
@@ -39,8 +41,16 @@ div {
 	-moz-transition: opacity 0.5s;
 }
 
+.hidden {
+	opacity: 0;
+}
+
 .step:not(.active) {
 	opacity: 0.3;
+}
+
+.hidden.step:not(.active) {
+	opacity: 0;
 }
 
 .step.active {
