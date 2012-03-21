@@ -3,6 +3,8 @@
 		p= u.email + (u.invited ? ' invitation sent' : '')
 .invite
 	form.well.form-inline(action='/networks/invite', method='post')
-		label.control-label(for='email') Invite
-		input.input-large(type='text', name='email', placeholder='email')
-		button.btn(type='submit') Send
+		label.control-label(for='email')= 'Invite someone'
+		input.input-large(type='text', name='email', placeholder='by typing an email')
+		button.btn(type='submit')
+			i.icon-envelope.icon-black
+			= ' Send'

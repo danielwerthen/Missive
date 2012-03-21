@@ -15,7 +15,6 @@ exports.register = function (app) {
 	app.post('/write/revise/:id', function (req, res) {
 		Article.findOne({ _id: req.params.id }, function (err, article) {
 			if (err || !article) return res.render('error');
-			console.log(req.body.version);
 			var article = article.addSuggestion(req.body.body, req.body.version, req.session.user._id);
 			if (!article) return res.render('error');
 			article.validate(function (err) {
@@ -34,11 +33,11 @@ exports.register = function (app) {
 	});
 	app.post('/write/save', function (req, res) {
 		var article = new Article({
-			body: req.body.body
-			, title: req.body.title
+			title: req.body.title
 		});
 		article.creator = req.session.user._id;
 		article.network = req.session.currentNetworkId;
+		article.body(req.body.body);
 		article.validate(function (err) {
 			if (err) return res.redirect('/write', { article: article });
 			article.save(function (err) {

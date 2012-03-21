@@ -75,3 +75,28 @@ a.btn i,p {
 .comment {
 	display: block;
 }
+
+.users p {
+	display: block;
+}
+
+p, div {
+	line-height: 1.55;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+}
+
+.fine-print p:first-letter {
+	float: left;
+	font-size: 350%;
+	line-height: 0.87;
+	font-weight: 600;
+	margin-right: 3px;
+	margin-bottom: 0px;
+}
+
+label.control-label {
+	margin-right: 1rem;
+}

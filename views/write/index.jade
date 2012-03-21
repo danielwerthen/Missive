@@ -8,7 +8,7 @@ header.jumbotron.subhead
 			.controls
 				if article.version
 					input(type='hidden', name='version', value=article.version())
-				input.input-xlarge#title(type= 'text', name='title', tabindex=1, placeholder='Make the title good, would you?', value=article.title, disabled=(article.title ? 'disabled' : ''))
+				input.input-xlarge#title(type= 'text', name='title', tabindex=1, placeholder='Make the title good, would you?', value=article.title)
 			.controls.relative
 				textarea.autofit.accept-tab(tabindex=2, name='body', placeholder='Enter your text here, you may use markdown if you would like to')= (article.body ? article.body() : '')
 				div.autofit-copy
