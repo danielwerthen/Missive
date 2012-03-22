@@ -27,7 +27,6 @@ exports.register = function (app) {
 				if (arts.length == 0) return res.redirect('/write');
 				var article = req.params.id === undefined ?
 					arts[0] : _.find(arts,  function (elem) { return elem._id.toString() === req.params.id; });
-				console.dir(article);
 				return res.render('review/index', { articles: arts, article: article });
 			});
 	});
