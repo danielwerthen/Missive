@@ -35,7 +35,7 @@ html(lang="en")
 								li#a-signout
 									a(href='/signout') Sign Out
 								li.divider-vertical
-								if networks.length > 0 || invitations.length > 0
+								if (networks.length > 0 || invitations.length > 0)
 									li.dropdown
 										a.dropdown-toggle(data-toggle='dropdown', href='#')= currentNetwork ? currentNetwork.name : 'Join a network'
 											b.caret

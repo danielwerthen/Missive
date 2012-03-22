@@ -74,7 +74,7 @@ require(
 				, ti = form.find('[name=title]')
 				, bi = form.find('[name=body]')
 				, title = $('<h1>' + ti.val() + '</h1>').appendTo(div)
-				, body = $('<div>' + bi.val() + '</div>').appendTo(div)
+				, body = $('<div>' + window.markdown.toHTML(bi.val()) + '</div>').appendTo(div)
 			ti.keyup(function () {
 				title.html(ti.val());
 			});
