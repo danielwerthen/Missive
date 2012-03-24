@@ -19,7 +19,10 @@ var articleSchema = new Schema({
 		body: { type: String }
 		, version: { type: Number }	} ]
 	, suggestions: [ {
-		body: { type: String }
+		change: [ {
+			start: { type: Number }
+			, from: { type: String }
+			, to: { type: String } } ]
 		, user: { type: Schema.ObjectId, ref: 'User' }
 		, version: { type: Number } } ]
 });
@@ -89,7 +92,8 @@ articleSchema.methods.findConflicts = function findConflicts(body, version) {
 articleSchema.methods.addSuggestion = function addSuggestion(body, version, userId) {
 	var rev = _.find(this.revisions, function (r) { return r.version == version; });
 	if (rev) {
-		this.suggestions.push({ body: body, version: version, user: userId });
+		var changeSet = vc.compare(rev.body, body);
+		this.suggestions.push({ change: changeSet, version: version, user: userId });
 		return this;
 	}
 	else return null;

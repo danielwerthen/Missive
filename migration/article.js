@@ -1,6 +1,7 @@
 var dbio = require('../lib/db')
 	, barrier = require('../lib/barrier')
 	, Article = require('../models/articles')
+	, vc = require('../lib/versionControl')
 
 setTimeout(function () {
 dbio(function (err, db) {
@@ -27,8 +28,14 @@ function Update(arts, done) {
 	var b = barrier(arts.length, done);
 	arts.forEach(function (art) {
 		Article.findOne({ _id: art._id }, function (err, article) {
-			article.revisions = [];
-			article.body(art.body);
+			article.suggestions = [];
+			if (art.suggestions) {
+				for (var i in art.suggestions) {
+					var s = art.suggestions[i];
+					if (s.body)
+						article.addSuggestion(s.body, s.version, s.user);
+				}
+			}
 			article.validate(function (err) {
 				if (err) console.dir(err);
 				else {

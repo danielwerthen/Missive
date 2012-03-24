@@ -1,0 +1,15 @@
+header.jumbotron.subhead
+	h1= currentNetwork.name
+	ul.breadcrumb
+		li
+			a(href='/review/') Review
+			span.divider /
+		li.active Suggestions
+.row-fluid
+	.span6
+		//p= JSON.stringify(article.suggestions)
+		each s in article.suggestions
+			!= partial('articles/_changeSet', { set: s })
+	.span6
+		#article-glance!= partial('articles/_glance', { article: article })
+
