@@ -4,7 +4,6 @@
 	.span8
 		form.form-horizontal(action= '/signin', method='post')
 			fieldset
-				legend Sign in!
 				.control-group( class= validation.email ) 
 					label.control-label( for= 'email' ) Email
 					.controls
@@ -16,7 +15,4 @@
 						input.input-xlarge#password(type= 'password', name='password', tabindex=2)
 						p.help-block=validation.passwordMessage
 				.form-actions
-					button.btn.btn-primary(type= 'submit', tabindex=4) Sign me up!
-	.span4
-		h3 Enter your email and password
-		p And we will be good to go!
+					button.btn.btn-primary(type= 'submit', tabindex=4) Login

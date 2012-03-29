@@ -1,6 +1,8 @@
 h1 Write once,
 h1 Use everywhere
 if user
-	p= 'Hello ' + user.email
+	a(href='/review') Start!
 else
-	p= 'Welcome, signup if you would like'
+	:markdown
+		You are very welcome to [signup](/signup) or, if you have already registered:
+	include signin

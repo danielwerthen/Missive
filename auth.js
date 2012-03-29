@@ -15,7 +15,7 @@ function signin(req, res, next) {
 		User.findOne({ email: req.body.email, password: hash(req.body.password) }, function (err, user) {
 			if (err || !user) return res.render('signin', { data: { email: req.body.email }, validation: { email: 'error', password: 'error' }});
 			req.session.user = user;
-			res.redirect('home');
+			res.redirect('/review');
 		});
 	}
 	else return res.redirect('home');
