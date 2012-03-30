@@ -1,10 +1,14 @@
--var networks = networks || [];
--var invitations = invitations || [];
 !!! 5
-html.html(lang="en")
+html(lang="en")
 	head
 		title Missive
 		include includes/head
 	body
-		.container!= body
+		.container
+			.header
+				a.brand(href='/') Missive
+				if user
+					!= partial('_networksNav', { networks: networks, invitations: invitations })
+			.content.well(data-margin-top='40', data-margin-bottom='40')!= body
+			.footer
 		include includes/foot
